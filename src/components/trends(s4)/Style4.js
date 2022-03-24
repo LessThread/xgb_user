@@ -53,8 +53,8 @@ class Style4 extends Component {
       }
       // 记录文章列表的文章数
       let maxn =
-        this.props.s4data && this.props.s4data.message
-          ? this.props.s4data.message.length
+        this.props.s4data && this.props.s4data.articleList
+          ? this.props.s4data.articleList.length
           : 0;
       // 渲染第一行第一部分
       for (let index = 0; index < Math.min(limit - 4, maxn); index++) {
@@ -62,23 +62,23 @@ class Style4 extends Component {
           <Card className="s4-content-card">
             <a
               className="no-dec-link"
-              href={`/article?articleId=${this.props.s4data.message[index].id}&columnId=${this.props.s4data.message[index].nav_id}`}
+              href={`/article?articleId=${this.props.s4data.articleList[index].id}&columnId=${this.props.s4data.articleList[index].nav_id}`}
             >
               {/* 以下注释在测试后恢复 */}
               <div
                 className="s4-img"
                 style={{
                   backgroundImage: `url(${this.loadImg(
-                    this.props.s4data.message[index].icon
+                    this.props.s4data.articleList[index].icon
                   )})`,
                 }}
               ></div>
-              {/* <img alt="pic" className="s4-img" src={this.loadImg(this.props.s4data.message[index].icon)}></img> */}
+              {/* <img alt="pic" className="s4-img" src={this.loadImg(this.props.s4data.articleList[index].icon)}></img> */}
               <Card.Title className="s4-text1">
-                {this.props.s4data.message[index].title}
+                {this.props.s4data.articleList[index].title}
               </Card.Title>
               <Card.Text className="s4-text2">
-                {this.props.s4data.message[index].created_at.substring(0, 10)}
+                {/* {this.props.s4data.articleList[index].created_at.substring(0, 10)} */}
               </Card.Text>
             </a>
           </Card>
@@ -90,22 +90,22 @@ class Style4 extends Component {
           <Card className="s4-content-card wrap-content">
             <a
               className="no-dec-link"
-              href={`/article?articleId=${this.props.s4data.message[index].id}&columnId=${this.props.s4data.message[index].nav_id}`}
+              href={`/article?articleId=${this.props.s4data.articleList[index].id}&columnId=${this.props.s4data.articleList[index].nav_id}`}
             >
               {/* 以下注释在测试后恢复 */}
               <div
                 className="s4-img"
                 style={{
                   backgroundImage: `url(${this.loadImg(
-                    this.props.s4data.message[index].icon
+                    this.props.s4data.articleList[index].icon
                   )})`,
                 }}
               ></div>
               <Card.Title className="s4-text1">
-                {this.props.s4data.message[index].title}
+                {this.props.s4data.articleList[index].title}
               </Card.Title>
               <Card.Text className="s4-text2">
-                {this.props.s4data.message[index].created_at.substring(0, 10)}
+                {/* {this.props.s4data.articleList[index].created_at.substring(0, 10)} */}
               </Card.Text>
             </a>
           </Card>
@@ -118,21 +118,21 @@ class Style4 extends Component {
           <Card className="s4-content-card wrap-content">
             <a
               className="no-dec-link"
-              href={`/article?articleId=${this.props.s4data.message[index].id}&columnId=${this.props.s4data.message[index].nav_id}`}
+              href={`/article?articleId=${this.props.s4data.articleList[index].id}&columnId=${this.props.s4data.articleList[index].nav_id}`}
             >
               <div
                 className="s4-img"
                 style={{
                   backgroundImage: `url(${this.loadImg(
-                    this.props.s4data.message[index].icon
+                    this.props.s4data.articleList[index].icon
                   )})`,
                 }}
               ></div>
               <Card.Title className="s4-text1">
-                {this.props.s4data.message[index].title}
+                {this.props.s4data.articleList[index].title}
               </Card.Title>
               <Card.Text className="s4-text2">
-                {this.props.s4data.message[index].created_at.substring(0, 10)}
+                {/* {this.props.s4data.articleList[index].created_at.substring(0, 10)} */}
               </Card.Text>
             </a>
           </Card>

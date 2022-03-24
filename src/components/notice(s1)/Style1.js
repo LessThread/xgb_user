@@ -41,7 +41,7 @@ class Style1 extends Component {
     render() {
         const renderList = [];
         if (this.props.s1data.up) {
-            renderList.push(this.props.s1data.up);
+            renderList.push(this.props.s1data.upper);
             for (let i = 0; i < Math.min(8, this.props.s1data.message.length); i++) {
                 renderList.push(this.props.s1data.message[i]);
             }
