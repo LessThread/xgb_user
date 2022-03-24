@@ -1,0 +1,24 @@
+.down-list{
+    margin-bottom: 3rem;
+    .down-count{
+        line-height: 4.2;
+        display: flex;
+        justify-content: flex-end;
+        color: #818181;
+    }
+    .down-item{
+        display: flex;
+        justify-content: space-between;
+        line-height: 2.2;
+        .down-filename{
+            color: #3a3a3a;
+            text-decoration: none;
+            &:hover{
+                color: #034Fa3;
+            }
+        }
+        .down-date{
+            color: #818181;
+        }
+    }
+}

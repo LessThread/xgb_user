@@ -1,0 +1,491 @@
+$title-font-size:1.6rem !global;
+$title-font-size-tablet:1.3rem !global;
+$title-font-size-mobile:1.1rem !global;
+$standard-color:#034FA3 !global;
+$sub-color:#F7F7F8 !global;
+$PC-standard-font:1rem !global;
+$Tablet-standard-font:0.9rem !global;
+$Mobile-standard-font:0.8rem !global;
+
+.breadcrumb {
+    height: 6rem;
+    background: rgba(242, 242, 242, 1);
+    margin: 0;
+    display: flex;
+    padding: 0 10%;
+    justify-content: space-between;
+
+    .breadcrumb-title {
+        font-size: 2.125rem;
+        font-family: MicrosoftYaHeiLight;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 1);
+        position: relative;
+        height: auto;
+        padding-top: 1.25rem;
+        padding-bottom: 1.25rem;
+    }
+
+    .breadcrumb-content {
+        background-color: rgba(0, 0, 0, 0);
+        padding: 2.125rem 1rem;
+        height: 6rem;
+
+        .breadcrumb-item {
+            font-size: 0.875rem;
+            font-family: MicrosoftYaHeiLight;
+            font-weight: 300;
+            color: rgba(0, 0, 0, 1);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .breadcrumb-itemm {
+            font-size: 0.875rem;
+            font-family: MicrosoftYaHeiLight;
+            font-weight: 300;
+            color: rgba(0, 0, 0, 1);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .breadcrumb-item::after {
+            content: "/";
+            margin-left: 0.6rem;
+            margin-right: 0.6rem;
+        }
+
+        .breadcrumb-item:hover {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        .breadcrumb-itemm:hover {
+            text-decoration: none;
+            color: rgba(0, 0, 0, 0.6);
+        }
+    }
+}
+
+.list-body {
+    background: rgba(255, 255, 255, 1);
+    margin-top: 48px;
+    margin-bottom: 11.25rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .list-content {
+        .list-content-divline {
+            width: 100%;
+            height: 1px;
+            border: 1px solid rgba(225, 232, 238, 1);
+        }
+
+        .l1-content {
+            margin: 0;
+            justify-content: space-between;
+            margin-top: 5px;
+            display: flex;
+            flex-direction: row;
+
+            .l1-title {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 16px;
+                font-family: MicrosoftYaHei;
+                font-weight: 400;
+                color: rgba(0, 0, 0, 1);
+                white-space: nowrap;
+                margin: 0;
+            }
+
+            .l1-date {
+                font-size: 16px;
+                font-family: MicrosoftYaHei;
+                font-weight: 400;
+                color: rgba(153, 153, 153, 1);
+                line-height: 36px;
+                margin: 0;
+            }
+        }
+
+    }
+
+    .sidebar {
+        max-width: 15rem;
+        height: fit-content;
+    }
+}
+
+.sidebar-card {
+    width: 100%;
+    min-width: 150px;
+    max-width: 270px;
+    border: none;
+    box-shadow: 0px 4px 9px #BABABA;
+}
+
+.sidebar-card-header {
+    height: 48px;
+    background: rgba(0, 71, 138, 1);
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 24px;
+}
+
+.sidebar-nav {
+    padding: 1rem;
+}
+
+.sidebar-list {
+    padding: 1rem;
+
+    .no-dec-link {
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+.updistance {
+    margin-bottom: 33px;
+}
+
+.sidebar-card1-text {
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 24px;
+}
+
+.listimg {
+    margin-right: 11px;
+}
+
+.no-dec-link {
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+.sidebar-notice-text {
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 24px;
+    white-space: nowrap;
+    margin: 0.5rem 0;
+}
+
+.sidebar-notice-date {
+    font-size: 14px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+    line-height: 24px;
+}
+
+.sidebar-brand {
+    padding: 0;
+}
+
+.sidebar-brand-limit {
+    overflow: hidden;
+    width: 45%;
+    border-radius: 5px;
+}
+
+.sidebar-brand-img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    height: 45px;
+    background-size: cover;
+    background-position: center;
+}
+
+.sidebar-brand-box {
+    padding: 0.7rem 0.7rem 0.2rem 0.7rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.sidebar-more {
+    font-size: 14px;
+    font-family: MicrosoftYaHeiLight;
+    font-weight: 300;
+    color: rgba(26, 71, 133, 1);
+    line-height: 24px;
+}
+
+.sidebar-more:hover {
+    color: rgba(26, 71, 133, 0.6);
+    text-decoration: none;
+}
+
+.height-limit {
+    height: 75px;
+    overflow: hidden;
+}
+
+
+
+
+
+.l2-title {
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    white-space: nowrap;
+    margin: 0;
+}
+
+.l2-date {
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+    line-height: 36px;
+    // right: 5px;
+    margin: 0;
+}
+
+.l2-content {
+    margin: 0;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.l3-content {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.l3-img-box {
+    width: 30%;
+    height: auto;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+}
+
+.l3-img {
+    position: relative;
+    width: 100%;
+    height: 190px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.l3-right {
+    width: 70%;
+    padding-left: 1rem;
+}
+
+.l3-title {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+    font-size: 1.25rem;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 1);
+    line-height: 25px;
+}
+
+.l3-date {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+    // line-height: 1.25rem;
+    // right: 5px;
+    margin: 0;
+}
+
+.l3-message {
+    overflow: hidden;
+    line-height: $PC-standard-font+0.5rem;
+    height: 3 * ($PC-standard-font+0.5rem);
+}
+
+.page-change {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.page-button {
+    background: none;
+    color: #000000;
+    border: none;
+    font-size: 16px;
+    font-family: MicrosoftYaHei;
+    font-weight: 400;
+    color: rgba(137, 137, 137, 1);
+    border: rgba(0, 71, 138, 0);
+    box-shadow: none;
+}
+
+.page-button:hover {
+    background: none;
+    color: #000000;
+}
+
+.page-button:active {
+    background: none;
+}
+
+.active-page {
+    border: 1px solid rgba(0, 71, 138, 1);
+}
+
+.btn-primary {
+    background: none;
+}
+
+.btn-primary:focus,
+.btn-primary:hover {
+    background: none;
+}
+
+//以下适配iPhone X
+@media screen and (max-width:768px) {
+    .list-content {
+        width: 100%;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .breadcrumb {
+        height: auto;
+        padding: 0.5rem 1rem;
+
+        .breadcrumb-title {
+            font-size: 1.1rem;
+            padding: 0;
+        }
+
+        .breadcrumb-content {
+            height: auto;
+            padding: 0;
+
+            .breadcrumb-item::after {
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+        }
+    }
+
+    .list-body {
+        margin: 0;
+        margin-top: 1.25rem;
+
+        .list-content {
+            width: 100%;
+            margin: 0;
+
+            .l1-content {
+                margin: 0;
+
+                .l1-title {
+                    font-size: $title-font-size-mobile - 0.1rem;
+                    line-height: 2rem;
+                    padding: 0;
+                    padding-right: 0.5rem;
+                }
+
+                .l1-date {
+                    font-size: $Mobile-standard-font;
+                    min-width: fit-content;
+                    width: fit-content;
+                    line-height: 2rem;
+                    padding: 0;
+                }
+            }
+
+            .l2-content {
+                flex-direction: column;
+
+                .l2-title {
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+
+                .l2-date {
+                    text-align: right;
+                }
+            }
+        }
+
+        .page-change {
+            margin-top: 30px;
+            margin-bottom: 1.25rem;
+        }
+    }
+
+
+
+    .l3-content {
+        margin-top: 1.5rem;
+
+        .l3-title {
+            font-size: $title-font-size-mobile;
+            line-height: $title-font-size-mobile+0.2rem;
+        }
+
+        .l3-img {
+            position: relative;
+            width: 100%;
+            height: 90px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .l3-date {
+            font-size: $Mobile-standard-font;
+            line-height: $Mobile-standard-font+0.1rem;
+        }
+
+        .l3-message {
+            font-size: $Mobile-standard-font;
+            line-height: $Mobile-standard-font+0.2rem;
+            height: 3*($Mobile-standard-font+0.2rem);
+            margin-top: 5px;
+        }
+    }
+
+}
+
+@media screen and (max-width:321px) {
+    .breadcrumb .breadcrumb-content {
+        padding-left: 40%;
+    }
+}
