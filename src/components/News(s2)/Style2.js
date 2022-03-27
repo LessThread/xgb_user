@@ -15,7 +15,8 @@ const getText = (text) => {
 class Style2 extends Component {
   loadImg(url) {
     if (url !== "null") {
-      return BaseUrl + url;
+      console.log("..."+ url)
+      return BaseUrl +"downLoadFile?fileName=" + url;
     } else {
       return defaultImg;
     }

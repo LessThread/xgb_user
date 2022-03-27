@@ -65,7 +65,7 @@ class Detail extends Component {
               download={content.activity.files[index].file_name}
               className="no-dec-link"
               href={
-                SrcUrl + "uploads/appendix/" + content.activity.files[index].url
+                SrcUrl + "downLoadFile?fileName=" + content.activity.files[index].url
               }
             >
               <i className="fa fa-file"></i>
