@@ -57,9 +57,9 @@ class Style2 extends Component {
           <div id="s2-component">
             <Card.Body id="s2-img-container" className="col-md-8">
               {this.imgCtrl(
-                this.props.s2data.upper.picture,
+                this.props.s2data.upArticle.picture,
                 this.props.s2data.upper.navTitle,
-                `/article?articleId=${this.props.s2data.upper.id}&columnId=${this.props.s2data.upper.nav_id}`
+                `/article?articleId=${this.props.s2data.upper.id}&columnId=${this.props.s2data.upper.navId}`
               )}
             </Card.Body>
             <Card.Body id="s2-content" className="col-md-4">
@@ -68,8 +68,8 @@ class Style2 extends Component {
                 {this.props.s2data.upper.createdAt}
               </Card.Text>
               <Card.Text className="s2-text2">
-                {this.props.s2data.upper.content
-                  ? getText(this.props.s2data.upper.content).substring(0, 70) + "…"
+                {this.props.s2data.upArticle.details
+                  ? getText(this.props.s2data.upArticle.details).substring(0, 70) + "…"
                   : null}
               </Card.Text>
             </Card.Body>
@@ -86,20 +86,20 @@ class Style2 extends Component {
           <div id="s2-component">
             <Card.Body id="s2-img-container" className="col-md-8">
               {this.imgCtrl(
-                this.props.s2data.articleList[0].icon,
-                this.props.s2data.articleList[0].title,
-                `/article?articleId=${this.props.s2data.articleList[0].id}&columnId=${this.props.s2data.articleList[0].nav_id}`
+                this.props.s2data.upArticle.icon,
+                this.props.s2data.upArticle.title,
+                `/article?articleId=${this.props.s2data.upArticle.id}&columnId=${this.props.s2data.upArticle.nav_id}`
               )}
 
             </Card.Body>
             <Card.Body id="s2-content" className="col-md-4">
               <Card.Title id="s2-title">{this.props.s2data.upper.nav_id}</Card.Title>
               <Card.Text className="s2-date">
-                {this.props.s2data.articleList[0].createdAt}
+                {this.props.s2data.upArticle.createdAt}
               </Card.Text>
               <Card.Text className="s2-text2">
-                {this.props.s2data.articleList[0].content
-                  ? getText(this.props.s2data.articleList[0].content).substring(
+                {this.props.s2data.upArticle.details
+                  ? getText(this.props.s2data.upArticle.details).substring(
                       0,
                       70
                     ) + "…"
@@ -108,7 +108,7 @@ class Style2 extends Component {
             </Card.Body>
           </div>
           <a
-            href={`/column?columnId=${this.props.s2data.articleList[0].nav_id}`}
+            href={`/column?columnId=${this.props.s2data.upArticle.nav_id}`}
             className="s2-more"
           >
             查看更多

@@ -32,10 +32,10 @@ class Style3 extends Component {
     let renderList = [];
     let elements = [],
       elementss = [];
-    if (this.props.s3data.up) {
-      renderList.push(this.props.s3data.up);
-      for (let i = 0; i < Math.min(4, this.props.s3data.message.length); i++) {
-        renderList.push(this.props.s3data.message[i]);
+    if (this.props.s3data.upper) {
+      renderList.push(this.props.s3data.upper);
+      for (let i = 0; i < Math.min(4, this.props.s3data.articleList.length); i++) {
+        renderList.push(this.props.s3data.articleList[i]);
       }
     }
     if (this.state.isLoaded) {
