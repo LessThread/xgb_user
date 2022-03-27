@@ -14,7 +14,7 @@ export default {
                     "title": "大标题大标题大标题大标题大标题大标题大标题大标题大标题大标题",
                     "picture": "",
                     "icon": null,
-                    "created_at": "2019-07-04 15:57:13"
+                    "createdAt": "2019-07-04 15:57:13"
                 },
                 {
                     "id": 6,
@@ -22,7 +22,7 @@ export default {
                     "title": "小标题小标题小标题小标题小标题小标题小标题小标题小标题小标题",
                     "picture": "",
                     "icon": "",
-                    "created_at": "2019-07-04 15:57:13"
+                    "createdAt": "2019-07-04 15:57:13"
                 }
             ]
         },
@@ -59,7 +59,7 @@ export default {
                     "title": "傻傻的",
                     "picture": "cnscnz.gif",
                     "icon": null,
-                    "created_at": "2019-07-04 15:57:14"
+                    "createdAt": "2019-07-04 15:57:14"
                 }
             ]
         }

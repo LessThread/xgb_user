@@ -54,7 +54,7 @@ export default
                 "type": "2",
                 "rank": "0",
                 "link": "",
-                "created_at": "2020-01-12 05:53:52",
+                "createdAt": "2020-01-12 05:53:52",
                 "updated_at": "2020-01-12 05:53:52",
                 "children": [
                     {
@@ -112,7 +112,7 @@ export default
                 "type": "2",
                 "rank": "1",
                 "link": "",
-                "created_at": "2020-01-12 00:45:51",
+                "createdAt": "2020-01-12 00:45:51",
                 "updated_at": "2020-01-12 00:45:51",
                 "children": [
                     {
@@ -142,7 +142,7 @@ export default
             //     "type": "0",
             //     "rank": "1",
             //     "link": "",
-            //     "created_at": "2020-01-12 00:45:51",
+            //     "createdAt": "2020-01-12 00:45:51",
             //     "updated_at": "2020-01-12 00:45:51",
             // },
             // {
@@ -151,7 +151,7 @@ export default
             //     "type": "0",
             //     "rank": "1",
             //     "link": "",
-            //     "created_at": "2020-01-12 00:45:51",
+            //     "createdAt": "2020-01-12 00:45:51",
             //     "updated_at": "2020-01-12 00:45:51",
             // },
             // {
@@ -160,7 +160,7 @@ export default
             //     "type": "0",
             //     "rank": "1",
             //     "link": "",
-            //     "created_at": "2020-01-12 00:45:51",
+            //     "createdAt": "2020-01-12 00:45:51",
             //     "updated_at": "2020-01-12 00:45:51",
             // },
             // {
@@ -169,7 +169,7 @@ export default
             //     "type": "0",
             //     "rank": "1",
             //     "link": "",
-            //     "created_at": "2020-01-12 00:45:51",
+            //     "createdAt": "2020-01-12 00:45:51",
             //     "updated_at": "2020-01-12 00:45:51",
             // }
         ],

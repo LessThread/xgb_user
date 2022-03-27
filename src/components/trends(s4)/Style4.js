@@ -45,7 +45,7 @@ class Style4 extends Component {
                 {this.props.s4data.upArticle.title}
               </Card.Title>
               <Card.Text className="s4-text2">
-                {this.props.s4data.upArticle.created_at}
+                {this.props.s4data.upArticle.createdAt}
               </Card.Text>
             </a>
           </Card>
@@ -78,7 +78,7 @@ class Style4 extends Component {
                 {this.props.s4data.articleList[index].title}
               </Card.Title>
               <Card.Text className="s4-text2">
-                {/* {this.props.s4data.articleList[index].created_at.substring(0, 10)} */}
+                {/* {this.props.s4data.articleList[index].createdAt.substring(0, 10)} */}
               </Card.Text>
             </a>
           </Card>
@@ -105,7 +105,7 @@ class Style4 extends Component {
                 {this.props.s4data.articleList[index].title}
               </Card.Title>
               <Card.Text className="s4-text2">
-                {/* {this.props.s4data.articleList[index].created_at.substring(0, 10)} */}
+                {/* {this.props.s4data.articleList[index].createdAt.substring(0, 10)} */}
               </Card.Text>
             </a>
           </Card>
@@ -132,7 +132,7 @@ class Style4 extends Component {
                 {this.props.s4data.articleList[index].title}
               </Card.Title>
               <Card.Text className="s4-text2">
-                {/* {this.props.s4data.articleList[index].created_at.substring(0, 10)} */}
+                {/* {this.props.s4data.articleList[index].createdAt.substring(0, 10)} */}
               </Card.Text>
             </a>
           </Card>

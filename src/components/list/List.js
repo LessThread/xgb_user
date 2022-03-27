@@ -162,7 +162,7 @@ class List extends Component {
               </a>
             </div>
             <div className="l1-date col-md-2">
-              {this.state.listData.articleList[index].created_at.substring(0, 10)}
+              {this.state.listData.articleList[index].createdAt.substring(0, 10)}
             </div>
           </div>
         );
@@ -204,7 +204,7 @@ class List extends Component {
                 </a>
               </div>
               <div className="l3-date">
-                {this.state.listData.articleList[index].created_at.substring(0, 10)}
+                {this.state.listData.articleList[index].createdAt.substring(0, 10)}
               </div>
               <div className="l3-message">
                 {this.slicePassage(

@@ -88,7 +88,7 @@ class Detail extends Component {
           ) : null} */}
           <div className="detail-title">{content.activity.title}</div>
           <div className="detail-publish">
-            发布日期：{content.activity.created_at.substring(0, 10)}
+            发布日期：{content.activity.createdAt.substring(0, 10)}
           </div>
           <div className="list-content-divline"></div>
           <div className="row info-bar">
@@ -155,7 +155,7 @@ class Detail extends Component {
           ) : null} */}
           <div className="detail-title">{content.message.title}</div>
           <div className="detail-publish">
-            发布日期：{content.message.created_at.substring(0, 10)}
+            发布日期：{content.message.createdAt.substring(0, 10)}
           </div>
           <div className="list-content-divline"></div>
           {/* <div className="row info-bar">

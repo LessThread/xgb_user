@@ -40,15 +40,15 @@ class Style1 extends Component {
 
     render() {
         const renderList = [];
-        if (this.props.s1data.up) {
+        if (this.props.s1data.upArticle) {
             renderList.push(this.props.s1data.upper);
-            for (let i = 0; i < Math.min(8, this.props.s1data.menuList.length); i++) {
-                renderList.push(this.props.s1data.menuList[i]);
+            for (let i = 0; i < Math.min(8, this.props.s1data.articleList.length); i++) {
+                renderList.push(this.props.s1data.articleList[i]);
             }
         }
         const elements = [];
         // console.log(this.props.s1data)
-        // console.log(this.props.s1data.menuList[0].created_at)
+        // console.log(this.props.s1data.menuList[0].createdAt)
         let dataLength = 0, foldLine = 0
         if (this.props.s1data && renderList) {
             dataLength = renderList.length;
@@ -67,7 +67,7 @@ class Style1 extends Component {
                         {renderList[index].title}
                     </a>
                     <div className={this.styleCtrl().s1smdate}>
-                        {renderList[index].created_at ? renderList[index].created_at.substring(5, 10) : null}
+                        {renderList[index].createdAt ? renderList[index].createdAt.substring(5, 10) : null}
                     </div>
                 </div>
             )
@@ -81,7 +81,7 @@ class Style1 extends Component {
                             {renderList[index].title}
                         </a>
                         <div className={this.styleCtrl().s1smdate}>
-                            {renderList[index].created_at ? renderList[index].created_at.substring(5, 10) : null}
+                            {renderList[index].createdAt ? renderList[index].createdAt.substring(5, 10) : null}
                         </div>
                     </div>
                 )
@@ -100,7 +100,7 @@ class Style1 extends Component {
                                         <img alt="new" className="newIcon" src={newIcon}></img>
                                     </a>
                                     <div className="s1-lg-date">
-                                        {this.props.s1data.menuList[0].created_at ? this.props.s1data.menuList[0].created_at.substring(5, 10) : null}
+                                        {this.props.s1data.menuList[0].createdAt ? this.props.s1data.menuList[0].createdAt.substring(5, 10) : null}
                                     </div>
                                 </Card.Text>
                                 : null}
