@@ -67,7 +67,7 @@ class Header extends React.Component {
         );
       } else if (navType === "2" || navType === 2) {
         //有二级栏目
-        let children = x.children;
+        let children = x.menuList;
         navArray.push(
           <NavDropdown
             title={x.title}

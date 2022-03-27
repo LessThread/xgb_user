@@ -144,7 +144,7 @@ class List extends Component {
   }
 
   listItem() {
-    let len = this.state.listData.message.length;
+    let len = this.state.listData.articleList.length;
     let elements = [];
     if (
       this.state.listData.listType === "1" ||
@@ -156,13 +156,13 @@ class List extends Component {
             <div className="l1-title col-md-10">
               <a
                 className="no-dec-link"
-                href={`/article?articleId=${this.state.listData.message[index].id}&columnId=${this.state.listData.message[index].nav_id}`}
+                href={`/article?articleId=${this.state.listData.articleList[index].id}&columnId=${this.state.listData.articleList[index].nav_id}`}
               >
-                {this.state.listData.message[index].title}
+                {this.state.listData.articleList[index].title}
               </a>
             </div>
             <div className="l1-date col-md-2">
-              {this.state.listData.message[index].created_at.substring(0, 10)}
+              {this.state.listData.articleList[index].created_at.substring(0, 10)}
             </div>
           </div>
         );
@@ -175,15 +175,15 @@ class List extends Component {
         elements.push(
           <div className="l3-content">
             <div className="l3-img-box">
-              {this.state.listData.message[index].icon !== null ? (
+              {this.state.listData.articleList[index].icon !== null ? (
                 <div
                   style={{
                     backgroundImage: `url(${
-                      BaseUrl + this.state.listData.message[index].icon
+                      BaseUrl + this.state.listData.articleList[index].icon
                     })`,
                   }}
                   className="l3-img"
-                  src={BaseUrl + this.state.listData.message[index].icon}
+                  src={BaseUrl + this.state.listData.articleList[index].icon}
                 ></div>
               ) : (
                 <div
@@ -198,17 +198,17 @@ class List extends Component {
               <div className="l3-title">
                 <a
                   className="no-dec-link"
-                  href={`/article?articleId=${this.state.listData.message[index].id}&columnId=${this.state.listData.message[index].nav_id}`}
+                  href={`/article?articleId=${this.state.listData.articleList[index].id}&columnId=${this.state.listData.articleList[index].nav_id}`}
                 >
-                  {this.state.listData.message[index].title}
+                  {this.state.listData.articleList[index].title}
                 </a>
               </div>
               <div className="l3-date">
-                {this.state.listData.message[index].created_at.substring(0, 10)}
+                {this.state.listData.articleList[index].created_at.substring(0, 10)}
               </div>
               <div className="l3-message">
                 {this.slicePassage(
-                  this.getSimpleText(this.state.listData.message[index].content)
+                  this.getSimpleText(this.state.listData.articleList[index].content)
                 ) + "…"}
               </div>
             </div>
@@ -225,13 +225,13 @@ class List extends Component {
             <div className="l1-title col-md-10">
               <a
                 className="no-dec-link"
-                href={`/article?articleId=${this.state.listData.message[index].id}&columnId=${this.state.listData.message[index].nav_id}`}
+                href={`/article?articleId=${this.state.listData.articleList[index].id}&columnId=${this.state.listData.articleList[index].nav_id}`}
               >
-                {this.state.listData.message[index].title}
+                {this.state.listData.articleList[index].title}
               </a>
             </div>
             <div className="l1-date col-md-2">
-              {this.state.listData.message[index].start_date.substring(0, 10)}
+              {this.state.listData.articleList[index].start_date.substring(0, 10)}
             </div>
           </div>
         );

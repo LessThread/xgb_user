@@ -36,13 +36,13 @@ class XgbNew extends Component {
     if (data)
       for (let i = 0; i < data.length; i++) {
         if (data[i].type === "2") {
-          if (data[i].children) {
-            for (let j = 0; j < data[i].children.length; j++) {
+          if (data[i].menuList) {
+            for (let j = 0; j < data[i].menuList.length; j++) {
               if (
-                data[i].children[j].link &&
-                data[i].children[j].type === "1"
+                data[i].menuList[j].link &&
+                data[i].menuList[j].type === "1"
               ) {
-                let query = data[i].children[j].link;
+                let query = data[i].menuList[j].link;
                 let vars = query.split("?")[1].split("&");
                 for (let i = 0; i < vars.length; i++) {
                   let pair = vars[i].split("=");
@@ -75,13 +75,13 @@ class XgbNew extends Component {
       //   console.log(data);
       for (let i = 0; i < data.length; i++) {
         if (data[i].type === "2") {
-          if (data[i].children) {
-            for (let j = 0; j < data[i].children.length; j++) {
+          if (data[i].menuList) {
+            for (let j = 0; j < data[i].menuList.length; j++) {
               if (
-                data[i].children[j].link &&
-                data[i].children[j].type === "1"
+                data[i].menuList[j].link &&
+                data[i].menuList[j].type === "1"
               ) {
-                let query = data[i].children[j].link;
+                let query = data[i].menuList[j].link;
                 let vars = query.split("?")[1].split("&");
                 for (let index = 0; index < vars.length; index++) {
                   let pair = vars[index].split("=");
@@ -89,9 +89,9 @@ class XgbNew extends Component {
                     pair[0] === "columnId" &&
                     pair[1] === targetId.toString()
                   ) {
-                    // console.log(data[i].children[j]);
-                    if (data[i].children[j] && data[i].children[j].title) {
-                      return data[i].children[j];
+                    // console.log(data[i].menuList[j]);
+                    if (data[i].menuList[j] && data[i].menuList[j].title) {
+                      return data[i].menuList[j];
                     } else {
                       return "未命名栏目";
                     }
@@ -170,7 +170,7 @@ class XgbNew extends Component {
       })
       .catch((e) => console.log("错误码:", e));
 
-    fetch(`http://120.48.17.78:8080/api/getAllCategory`, setting)
+    fetch(`http://120.48.17.78:8080/api/Menu/getAll`, setting)
       .then(function (response) {
         return response.json();
       })

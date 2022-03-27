@@ -72,7 +72,7 @@ class App extends React.Component {
   //             } else if (navType == "1") {
   //                 routeArray.push(<Link key="redirect" exact to={x.link} />)
   //             } else if (navType == "2") {
-  //                 let children = x.children;
+  //                 let children = x.menuList;
   //                 if (children.length > 0) {
   //                     // routeArray.push(<Redirect key="redirect" exact from={`/:posA/${x.id}`} to={`/:posA/:posB/column?columnId=${children[0].id}`} />)
   //                     routeArray.push(<Link key="redirect" exact to={x.link} />)
@@ -103,7 +103,7 @@ class App extends React.Component {
   //                 </li>
   //             )
   //         } else if (type === 2) {
-  //             x.children.forEach((v) => {
+  //             x.menuList.forEach((v) => {
   //                 navLists.push(
   //                     <li>
   //                         <Link to={v.link}>{v.title}</Link>
@@ -139,7 +139,7 @@ class App extends React.Component {
         //     )
         // }
       } else if (type === 2) {
-        x.children.forEach((v) => {
+        x.menuList.forEach((v) => {
           routeLists.push(
             <Route path={`/column`}>
               <List />
@@ -171,7 +171,7 @@ class App extends React.Component {
       //     naviData: naviDataTemp.data,
       //     isInitial: true,
       // });
-      fetch(`http://120.48.17.78:8080/api/getAllCategory`, setting)
+      fetch(`http://120.48.17.78:8080/api/Menu/getAll`, setting)
         .then((res) => res.json())
         .then((data) => {
           // console.log(data.data)

@@ -26,26 +26,26 @@ class Style4 extends Component {
     let limit = 6;
     if (this.props.isLoaded) {
       // 如果有置顶文章，则先渲染置顶文章；若无，依次渲染列表内前六篇文章
-      if (this.props.s4data && this.props.s4data.up) {
+      if (this.props.s4data && this.props.s4data.upArticle) {
         limit = 5;
         elements.push(
           <Card className="s4-content-card">
             <a
               className="no-dec-link"
-              href={`/article?articleId=${this.props.s4data.up.id}&columnId=${this.props.s4data.up.nav_id}`}
+              href={`/article?articleId=${this.props.s4data.upArticle.id}&columnId=${this.props.s4data.upArticle.nav_id}`}
             >
               {/* 以下注释在测试后恢复 */}
               <div
                 className="s4-img"
                 style={{
-                  backgroundImage:`url(${this.loadImg(this.props.s4data.up.icon)})`
+                  backgroundImage:`url(${this.loadImg(this.props.s4data.upArticle.icon)})`
                 }}
               ></div>
               <Card.Title className="s4-text1">
-                {this.props.s4data.up.title}
+                {this.props.s4data.upArticle.title}
               </Card.Title>
               <Card.Text className="s4-text2">
-                {this.props.s4data.up.created_at.substring(0, 10)}
+                {this.props.s4data.upArticle.created_at}
               </Card.Text>
             </a>
           </Card>

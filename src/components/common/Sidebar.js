@@ -76,15 +76,15 @@ class Sidebar extends Component {
     let column = getQueryVariable("columnId");
     let index = this.getIndex(data, column);
     if (data[index]) {
-      for (let i = 0; i < data[index].children.length; i++) {
+      for (let i = 0; i < data[index].menuList.length; i++) {
         navArray.push(
           <Card.Text className="sidebar-card1-text">
             <img alt="nav-icon" className="listimg" src={listimg}></img>
             <a
               className="no-dec-link"
-              href={`${this.props.navData[index].children[i].link}`}
+              href={`${this.props.navData[index].menuList[i].link}`}
             >
-              {this.props.navData[index].children[i].title}
+              {this.props.navData[index].menuList[i].title}
             </a>
           </Card.Text>
         );
@@ -100,21 +100,21 @@ class Sidebar extends Component {
       let elements = [];
       for (
         let index = 0;
-        index < Math.min(5, upper[2].message.length);
+        index < Math.min(5, upper[2].articleList.length);
         index++
       ) {
         elements.push(
           <div>
             <Card.Text className="sidebar-notice-text">
               <a
-                href={`/article?articleId=${upper[2].message[index].id}&columnId=${upper[2].message[0].nav_id}`}
+                href={`/article?articleId=${upper[2].articleList[index].id}&columnId=${upper[2].articleList[0].nav_id}`}
                 className="no-dec-link"
               >
-                {upper[2].message[index].title}
+                {upper[2].articleList[index].title}
               </a>
             </Card.Text>
             <div className="sidebar-notice-date">
-              {upper[2].message[index].create_at}
+              {upper[2].articleList[index].create_at}
             </div>
           </div>
         );

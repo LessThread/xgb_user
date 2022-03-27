@@ -12,7 +12,7 @@ class Hiddennav extends Component {
     console.log(data);
     let navArray = [];
     data.forEach((x, i) => {
-      let children = x.children;
+      let children = x.menuList;
       if (children && children.length > 0) {
         navArray.push(
           <NavDropdown
