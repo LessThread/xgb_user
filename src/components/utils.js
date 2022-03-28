@@ -1,4 +1,4 @@
-const BASE_URL = ''//'https://xuegong.twtstudio.com/api';
+const BASE_URL = 'http://120.48.17.78:8080/api'//'https://xuegong.twtstudio.com/api';
 
 export const fetchData = async apiPath => {
     const response = await fetch(`${BASE_URL}/${apiPath}`);

@@ -144,46 +144,58 @@ class List extends Component {
   }
 
   listItem() {
-    let len = this.state.listData.articleList.length;
+    let len = this.state.listData.res.length;
+    //alert(this.state.listData.res[1].updated_at)
     let elements = [];
+
+
     if (
-      this.state.listData.listType === "1" ||
-      this.state.listData.listType === 1
-    ) {
+      1
+    )
+    
+    {
+
       for (let index = 0; index < len; index++) {
         elements.push(
           <div className="l1-content">
             <div className="l1-title col-md-10">
               <a
                 className="no-dec-link"
-                href={`/article?articleId=${this.state.listData.articleList[index].id}&columnId=${this.state.listData.articleList[index].nav_id}`}
+                href={`/article?articleId=${this.state.listData.res[index].id}&columnId=${this.state.listData.res[index].nav_id}`}
               >
-                {this.state.listData.articleList[index].title}
+                {this.state.listData.res[index].title}
               </a>
             </div>
+
             <div className="l1-date col-md-2">
-              {this.state.listData.articleList[index].createdAt.substring(0, 10)}
+              {this.state.listData.res[index].updated_at}
             </div>
           </div>
         );
       }
-    } else if (
+    } 
+    
+    
+    else if (
       this.state.listData.listType === "2" ||
       this.state.listData.listType === 2
-    ) {
+    ) 
+    
+    
+    {
       for (let index = 0; index < len; index++) {
         elements.push(
           <div className="l3-content">
             <div className="l3-img-box">
-              {this.state.listData.articleList[index].icon !== null ? (
+              {this.state.listData.res[index].icon !== null ? (
                 <div
                   style={{
                     backgroundImage: `url(${
-                      BaseUrl + this.state.listData.articleList[index].icon
+                      BaseUrl + this.state.listData.res[index].icon
                     })`,
                   }}
                   className="l3-img"
-                  src={BaseUrl + this.state.listData.articleList[index].icon}
+                  src={BaseUrl + this.state.listData.res[index].icon}
                 ></div>
               ) : (
                 <div
@@ -198,40 +210,45 @@ class List extends Component {
               <div className="l3-title">
                 <a
                   className="no-dec-link"
-                  href={`/article?articleId=${this.state.listData.articleList[index].id}&columnId=${this.state.listData.articleList[index].nav_id}`}
+                  href={`/article?articleId=${this.state.listData.res[index].id}&columnId=${this.state.listData.res[index].nav_id}`}
                 >
-                  {this.state.listData.articleList[index].title}
+                  {this.state.listData.res[index].title}
                 </a>
               </div>
               <div className="l3-date">
-                {this.state.listData.articleList[index].createdAt.substring(0, 10)}
+                {this.state.listData.res[index].updated_at}
               </div>
               <div className="l3-message">
                 {this.slicePassage(
-                  this.getSimpleText(this.state.listData.articleList[index].content)
+                  this.getSimpleText(this.state.listData.res[index].content)
                 ) + "…"}
               </div>
             </div>
           </div>
         );
       }
-    } else if (
+    } 
+    
+    
+    else if (
       this.state.listData.listType === "3" ||
       this.state.listData.listType === 3
-    ) {
+    ) 
+    
+    {
       for (let index = 0; index < len; index++) {
         elements.push(
           <div className="l1-content">
             <div className="l1-title col-md-10">
               <a
                 className="no-dec-link"
-                href={`/article?articleId=${this.state.listData.articleList[index].id}&columnId=${this.state.listData.articleList[index].nav_id}`}
+                href={`/article?articleId=${this.state.listData.res[index].id}&columnId=${this.state.listData.res[index].nav_id}`}
               >
-                {this.state.listData.articleList[index].title}
+                {this.state.listData.res[index].title}
               </a>
             </div>
             <div className="l1-date col-md-2">
-              {this.state.listData.articleList[index].start_date.substring(0, 10)}
+              {this.state.listData.res[index].start_date}
             </div>
           </div>
         );
@@ -323,7 +340,8 @@ class List extends Component {
 
   componentWillReceiveProps() {
     fetch(
-      SrcUrl + `api/index/messageList/` + getQueryVariable("columnId") + "/1",
+      SrcUrl + `Article/getByPage` +  "?nav_id=1&pageNum=1&pageSize=10",
+      // SrcUrl + `Article/getByPage/` + getQueryVariable("columnId") + "/1",
       setting
     )
       .then(function (response) {
@@ -342,7 +360,8 @@ class List extends Component {
   componentDidMount() {
     if (!this.state.isLoaded) {
       fetch(
-        SrcUrl + `api/index/messageList/` + getQueryVariable("columnId") + "/1",
+        SrcUrl + `Article/getByPage` +  "?nav_id=1&pageNum=1&pageSize=10",
+        // SrcUrl + `api/index/messageList/` + getQueryVariable("columnId") + "/1",
         setting
       )
         .then(function (response) {
