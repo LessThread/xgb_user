@@ -128,7 +128,7 @@ class List extends Component {
             <i className="fa fa-angle-left"></i>
           </Button>
         ) : null}
-        {/* <Button onClick={this.handlePageChange.bind(this, -1)} className="page-button"><i className="fa fa-angle-left"></i></Button> */}
+        <Button onClick={this.handlePageChange.bind(this, -1)} className="page-button"><i className="fa fa-angle-left"></i></Button>
         {buttons}
         {pages > 1 ? (
           <Button
@@ -138,7 +138,7 @@ class List extends Component {
             <i className="fa fa-angle-right"></i>
           </Button>
         ) : null}
-        {/* <Button onClick={this.handlePageChange.bind(this, 0)} className="page-button"><i className="fa fa-angle-right"></i></Button> */}
+        <Button onClick={this.handlePageChange.bind(this, 0)} className="page-button"><i className="fa fa-angle-right"></i></Button>
       </ButtonGroup>
     );
   }

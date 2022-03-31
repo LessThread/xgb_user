@@ -11,6 +11,8 @@ import {
 import "../../styles/common/header.scss";
 import logo from "../../assets/logo.png";
 import HiddenNav from "./HiddenNav";
+
+
 // import '../../locals/nav';
 // import searchimg from '../../assets/search.png';
 //把数据渲染出来。并且可以跳转到相应路由的界面，哭唧唧
@@ -51,6 +53,11 @@ class Header extends React.Component {
           </Nav.Link>
           // </NavDropdown>
         );
+
+
+
+
+        
       } else if (navType === "1" || navType === 1) {
         //一级栏目是列表
         navArray.push(

@@ -46,6 +46,7 @@ class Examples extends Component {
     if (dataLength > 0) {
       for (let index = 0; index < dataLength; index++) {
         if (item[index].text1 !== "") {
+          console.log("example"+ item[0].mes_id);
           elements.push(
             <a
               href={`/article?articleId=${item[index].mes_id}&columnId=${item[index].nav_id}`}

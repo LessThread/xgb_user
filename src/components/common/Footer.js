@@ -71,11 +71,11 @@ class Footer extends Component {
           </div>
         </div>
         <div className="footer-info">©Copyright 2019 All Rights Reserved</div>
-        {/* <div class="footer-info">天外天工作室 / © 2000-2018 / &nbsp;
+        <div class="footer-info">天外天工作室 / © 2000-2018 / &nbsp;
                 <a href="http://www.miibeian.gov.cn/">津ICP备05004358号-12</a>&nbsp;/ 津教备0767号<br></br>
                     <a href="https://coder.twtstudio.com">关于我们</a>&nbsp;
                     /&nbsp;<a href="https://coder.twtstudio.com/join">加入我们</a>
-                </div> */}
+                </div>
       </div>
     );
   }
