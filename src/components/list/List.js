@@ -340,7 +340,7 @@ class List extends Component {
 
   componentWillReceiveProps() {
     fetch(
-      SrcUrl + `Article/getByPage` +  "?nav_id=1&pageNum=1&pageSize=10",
+      SrcUrl + `Article/getByPage` +  "?nav_id="+getQueryVariable("columnId")+"&pageNum=1&pageSize=10",
       // SrcUrl + `Article/getByPage/` + getQueryVariable("columnId") + "/1",
       setting
     )
@@ -360,9 +360,16 @@ class List extends Component {
   componentDidMount() {
     if (!this.state.isLoaded) {
       fetch(
-        SrcUrl + `Article/getByPage` +  "?nav_id=1&pageNum=1&pageSize=10",
+        SrcUrl + `queryMessageList` +  "?nav_id="+ getQueryVariable("columnId") + "&pageNum=1" +"&pageSize=10",
         // SrcUrl + `api/index/messageList/` + getQueryVariable("columnId") + "/1",
-        setting
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+          },
+          mode: "cors",
+          cache: "default",
+        }
       )
         .then(function (response) {
           return response.json();
