@@ -42,6 +42,7 @@ class Home extends Component {
             bannerData: null,
         })
     }
+    
 
     componentDidMount = () => {
         fetch( `http://120.48.17.78:8080/api/index/GetUpper`, setting)

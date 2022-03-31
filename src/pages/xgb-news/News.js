@@ -105,29 +105,10 @@ class XgbNew extends Component {
             console.log("Error:Exist father nav without son");
           }
         } else if (data[i].link && data[i].type === "1") {
-          //   console.log(data[i].link);
-          //   console.log(this.getLinkParam(data[i].link, "columnId"));
-          //   console.log(targetId)
           if (this.getLinkParam(data[i].link, "columnId") === targetId) {
             console.log(data[i]);
             return data[i];
           }
-
-          //   let query = data[i].link;
-          //   let vars = query.split("?")[1].split("&");
-          //   for (let j = 0; j < vars.length; j++) {
-          //     let pair = vars[j].split("=");
-          //     // console.log(pair);
-          //     // console.log(targetId);
-          //     console.log(data[i]);
-          //     if (pair[0] === "columnId" && pair[1] === targetId.toString()) {
-          //       if (data[i].title) {
-          //         return data[i].title;
-          //       } else {
-          //         return "未命名栏目";
-          //       }
-          //     }
-          //   }
         } else {
           console.log("Error:A column is supposed to have a link");
         }
@@ -147,6 +128,7 @@ class XgbNew extends Component {
   }
 
   componentDidMount() {
+    
     // console.log(this.getNav());
     // console.log(this.getPasId());
     // fetch(
