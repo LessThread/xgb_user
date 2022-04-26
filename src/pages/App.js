@@ -62,60 +62,6 @@ class App extends React.Component {
     this.setState({ childValue: value });
   };
 
-  // getRoute() {
-  //     let routeArray = [];
-  //     if (this.state.isInitial) {
-  //         this.state.naviData.forEach((x, i) => {
-  //             let navType = x.type;
-  //             if (navType === "0") {
-  //                 routeArray.push(<Link key="redirect" exact to={x.link} />)
-  //             } else if (navType == "1") {
-  //                 routeArray.push(<Link key="redirect" exact to={x.link} />)
-  //             } else if (navType == "2") {
-  //                 let children = x.menuList;
-  //                 if (children.length > 0) {
-  //                     // routeArray.push(<Redirect key="redirect" exact from={`/:posA/${x.id}`} to={`/:posA/:posB/column?columnId=${children[0].id}`} />)
-  //                     routeArray.push(<Link key="redirect" exact to={x.link} />)
-  //                 }
-  //             }
-  //         })
-  //         // routeArray.push(<Route key="route" path={`/:posA/column`} component={List} />);
-  //         // routeArray.push(<Route key="route" path={`/:posA/:posB/column`} component={List} />);
-  //     }
-  //     return routeArray;
-  // }
-
-  // getNavi = () => {
-  //     const { naviData } = this.state;
-  //     let navLists = [];
-  //     naviData.forEach((x) => {
-  //         let type = parseInt(x.type)
-  //         if (type === 0) { //外链
-  //             navLists.push(
-  //                 <li>
-  //                     <a href={`http://${x.link}`} target="_blank" rel="noopener noreferrer">{x.title}</a>
-  //                 </li>
-  //             )
-  //         } else if (type === 1) {
-  //             navLists.push(
-  //                 <li>
-  //                     <Link to={x.link}>{x.title}</Link>
-  //                 </li>
-  //             )
-  //         } else if (type === 2) {
-  //             x.menuList.forEach((v) => {
-  //                 navLists.push(
-  //                     <li>
-  //                         <Link to={v.link}>{v.title}</Link>
-  //                     </li>
-  //                 )
-  //             }
-  //             )
-  //         }
-  //     })
-  //     return navLists;
-  // }
-
   getRoute = () => {
     const { naviData } = this.state;
     let routeLists = [];
@@ -127,17 +73,7 @@ class App extends React.Component {
             <List />
           </Route>
         );
-        // console.log((x.link || " ").split(':')[0]);
-        // if (((x.link || " ").split('?')[0]).split('/')[2] === "column") {
-        //     routeLists.push(
-        //         <Route path={x.link}>
-        //             <List />
-        //         </Route>
-        //         // <Route path={`${(x.link || " ").split(':')[0]}=:id`}>
-        //         //     <List />
-        //         // </Route>
-        //     )
-        // }
+    
       } else if (type === 2) {
         x.menuList.forEach((v) => {
           routeLists.push(
@@ -145,18 +81,6 @@ class App extends React.Component {
               <List />
             </Route>
           );
-          // console.log("type2:" + v.link);
-          // console.log((v.link || " ").split('=')[0]);
-          // if (((v.link || " ").split('?')[0]).split('/')[3] === "column") {
-          //     routeLists.push(
-          //         <Route path={v.link}>
-          //             <List />
-          //         </Route>
-          //         // <Route path={`${(v.link || " ").split(':')[0]}=:id`}>
-          //         //     <List />
-          //         // </Route>
-          //     )
-          // }
         });
       }
     });
