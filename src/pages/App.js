@@ -14,12 +14,15 @@ import List from "../pages/xgb-lists/Lists";
 import Home from "./xgb-index/Home";
 import Page from "./xgb-static-page/Page";
 import Download from './xgb-static-page/download'
+import Counselors from "./xgb-static-page/Counselors";
 // 以下为废弃代码，这里原本用于测试接口的连通性
 // import Navi from '../test/Navi';
 import "../styles/common/header.scss";
 import Load from "../components/common/Load";
 import naviDataTemp from "../test/Navi";
 import { SrcUrl, BaseUrl } from "../components/BaseUrl";
+
+
 //根据导航到的数据
 /* 
 列表/栏目 http://xxx.com/1/1/column?columnId=1
@@ -133,6 +136,9 @@ class App extends React.Component {
                   : null}
                 <Route exact path="/department">
                   <Page />
+                </Route>
+                <Route exact path="/counselors">
+                  <Counselors/>
                 </Route>
                 <Route exact path="/download">
                   <Download />
