@@ -7,6 +7,7 @@ class Collge extends Component {
 
   
   render() {
+    console.log("##")
     return (
       <div style={{
         display: 'flex',

@@ -25,12 +25,14 @@ class XgbNew extends Component {
       passageContent: null,
     };
   }
+
   getLinkParam(link, name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
     var r = link.split("?")[1].substr(0).match(reg);
     if (r != null) return decodeURI(r[2]);
     return null;
   }
+  
   getNavTitleById(targetId, data) {
     //根据导航栏数据，用id匹配相应的标题
     if (data)
