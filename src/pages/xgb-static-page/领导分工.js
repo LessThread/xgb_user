@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Leader extends Component {
   render() {
     return (
-      <div>
+      <div className="overall">
         <figure style={{ margin: "0 auto" }}>
           <table
             style={{

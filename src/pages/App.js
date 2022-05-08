@@ -23,6 +23,10 @@ import Load from "../components/common/Load";
 import naviDataTemp from "../test/Navi";
 import { SrcUrl, BaseUrl } from "../components/BaseUrl";
 
+import Leader from "./xgb-static-page/领导分工";
+import Tel from "./xgb-static-page/办公电话";
+import Brief from "./xgb-static-page/部门简介";
+
 
 //根据导航到的数据
 /* 
@@ -102,7 +106,20 @@ class App extends React.Component {
       fetch(`http://120.48.17.78:8080/api/Menu/getAll`, setting)
         .then((res) => res.json())
         .then((data) => {
-          // console.log(data.data)
+          data.data[1].link=`/download`
+          //data.data[0].link=`/communication`
+          data.data[0].link=`/list/nav_id?=6`
+          data.data[2].link=`/list/nav_id?=1`
+          data.data[3].link=`/list/nav_id?=2`
+          //data.data[4].link=`/introduction`
+          data.data[4].menuList[0].link=`/introduction`
+          data.data[4].menuList[1].link=`/division`
+          data.data[4].menuList[2].link=`/phone`
+          data.data[5].menuList[0].link=`/list/nav_id?=4`
+          data.data[5].menuList[1].link=`/list/nav_id?=5`
+          data.data[5].menuList[2].link=`/department?id=4`
+          data.data[6].link=`/list/nav_id?=3`
+          console.log(data.data[1].link)
           this.setState({
             naviData: data.data,
           });
@@ -146,6 +163,15 @@ class App extends React.Component {
                 </Route>
                  <Route exact path="/artDisplay">
                   <ArtDisplay />
+                </Route>
+                <Route exact path="/phone">
+                  <Tel />
+                </Route>
+                <Route exact path="/division">
+                  <Leader/>
+                </Route>
+                <Route exact path="/introduction">
+                  <Brief/>
                 </Route>
               </Switch>
             </div>

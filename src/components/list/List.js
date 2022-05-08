@@ -29,10 +29,11 @@ class List extends Component {
       isLoaded: false,
       isNavLoaded: false,
 
-      nav_id:`1`,
+      nav_id: 1,
       pageNum: 1,
-      pageSize: 10,
+      pageSize: 15,
       accdat:[],
+      showElem: 0,
     };
   }
 
@@ -40,6 +41,11 @@ class List extends Component {
 
   componentWillMount()
   {
+    let iurl= window.location.href
+            let index=iurl.indexOf("=",3)
+            iurl=iurl.slice(index+1)
+            this.state.nav_id=iurl
+
     fetch(`http://120.48.17.78:8080/api/Article/getByPage?nav_id=`+this.state.nav_id+`&pageNum=`+this.state.pageNum+`&pageSize=`+this.state.pageSize, setting)
             .then(function (response) {
               return response.json();
@@ -70,14 +76,69 @@ class List extends Component {
              <div style={{width: `60%`,padding: `10px`,}}>
              <a href={ID} class='no-dec-link'>{item.title} </a>
              </div>
+             
+             <div style={{fontSize: `10px`,width: `30%`,textAlign:`center`}}>
+               {item.updated_at}
+             </div>
           </div>
         </div>
       )})
   }
 
+  up()
+  {
+    if(this.state.pageNum>1)this.state.pageNum--;
+    this.state.show++;
+    console.log(this.state.pageNum)
+    fetch(`http://120.48.17.78:8080/api/Article/getByPage?nav_id=`+this.state.nav_id+`&pageNum=`+this.state.pageNum+`&pageSize=`+this.state.pageSize, setting)
+            .then(function (response) {
+              return response.json();
+            })
+            .then((rest) => {
+                console.log("@")
+                console.log(rest)
+                this.setState({
+                    accdat: rest.data.res
+                },
+                ()=>
+                 {
+                     console.log(this.state.accdat)
+                 })
+              })
+  }
+  
+
+  down()
+  {
+    this.state.pageNum++;
+    this.state.show--;
+    console.log(this.state.pageNum)
+    fetch(`http://120.48.17.78:8080/api/Article/getByPage?nav_id=`+this.state.nav_id+`&pageNum=`+this.state.pageNum+`&pageSize=`+this.state.pageSize, setting)
+            .then(function (response) {
+              return response.json();
+            })
+            .then((rest) => {
+                console.log("@")
+                console.log(rest)
+                this.setState({
+                    accdat: rest.data.res
+                },
+                ()=>
+                 {
+                     console.log(this.state.accdat)
+                 })
+              })
+  }
+
   button()
   {
-    
+    return(
+      <div style={{display:`flex` ,marginLeft: `40%`}}> 
+        <button onClick={()=>this.up()} style={{width: `100px`,background: `rgba(0,0,0,0)`,border: `2px solid black`,borderRadius: `3px`}}>上一页</button>
+        <div style={{width: `60px`, textAlign: `center`}}>{this.state.pageNum}</div>
+        <button onClick={()=>this.down()} style={{width: `100px`,background: `rgba(0,0,0,0)`,border: `2px solid black`,borderRadius: `3px`}}>下一页</button>
+      </div>
+    )
   }
 
   render() {
@@ -91,6 +152,9 @@ class List extends Component {
                  {this.NewList()}
                </div>
 
+               <br></br>
+               <br></br>
+               
                <div>
                  {this.button()}
                </div>

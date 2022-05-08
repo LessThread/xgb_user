@@ -53,11 +53,7 @@ class Header extends React.Component {
           </Nav.Link>
           // </NavDropdown>
         );
-
-
-
-
-        
+  
       } else if (navType === "1" || navType === 1) {
         //一级栏目是列表
         navArray.push(
@@ -172,15 +168,15 @@ class Header extends React.Component {
         <div className="menu-btn" onClick={this.handleNavButton.bind(this)}>
           {this.state.isNavOpen ? (
             <div>
-              <div className="navline-cross-1"></div>
-              <div className="navline-cross-2"></div>
-              <div className="navline-cross-3"></div>
+              <div className="navline-cross-1">...</div>
+              <div className="navline-cross-2">...</div>
+              <div className="navline-cross-3">...</div>
             </div>
           ) : (
             <div>
-              <div className="navline"></div>
-              <div className="navline"></div>
-              <div className="navline"></div>
+              <div className="navline">...</div>
+              <div className="navline">...</div>
+              <div className="navline">...</div>
             </div>
           )}
         </div>

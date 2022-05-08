@@ -70,8 +70,9 @@ const setting = {
             <div key={index} style={{padding: '30px',width: '30%',display: 'flex',justifyContent:'center',padding:'25px',borderRadius: "15px",border:'1px solid rgba(0,0,0,0.2)',boxShadow: "0px 0px 5px #888888",
                                       marginLeft:'15%',marginTop:'.5%',marginBottom: '.5%',justifySelf: "stretch",height: "400px"}}>
 
-                <div style={{width: '50%',textAlign: `center`}}>
-                    <img src={`http://120.48.17.78:8080/api/downLoadFile?fileName=`+item.picName} style={{width: '80%',borderRadius: "15px",marginTop:`10%`}}/>
+                <div style={{width: '60%',textAlign: `center`}}>
+                    <img src={`http://120.48.17.78:8080/api/downLoadFile?fileName=`+item.picName} 
+                    style={{width: '80%',borderRadius: "15px",marginTop:`10%`,height: `80%`}}/>
                 </div> 
 
                 <div style={{display: 'flex',flexDirection: 'column',paddingLeft:'10px',height: '100%',justifyContent: 'space-between',width: '50%'}}>

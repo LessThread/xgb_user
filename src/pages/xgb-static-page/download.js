@@ -38,6 +38,7 @@ class Page extends Component {
     );
     return breadCrumbList;
   }
+  
   componentDidMount() {
     fetch( `http://120.48.17.78:8080/api/getAllFile`, setting)
       .then(function (response) {
@@ -62,7 +63,7 @@ class Page extends Component {
         list.push(
           <li className="down-item">
             <a
-              href={`http://120.48.17.78:8080/api/downLoadFile?fileName=${data[i]["id"]}`}
+              href={`http://120.48.17.78:8080/api/downLoadFile?fileName=${data[i]["realName"]}`}
               className="down-filename"
             >
               {data[i]["realName"]}

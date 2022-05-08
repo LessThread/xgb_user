@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-
 class Tel extends Component {
   render() {
     return (
-      <div>
+      <div className="overall">
         <figure style={{ margin:"0 auto" }}>
           <table style={{ margin:"0 auto",marginBottom:"2rem" }} className="pure-table">
             <thead>
