@@ -30,18 +30,10 @@ class List extends Component {
       isNavLoaded: false,
 
       nav_id:`1`,
-      pageNum: `1`,
+      pageNum: 1,
       pageSize: 10,
       accdat:[],
     };
-  }
-
-  slicePassage(x) {
-    if (x.length < 90) {
-      return x;
-    } else {
-      return x.substring(0, 90);
-    }
   }
 
 
@@ -68,7 +60,7 @@ class List extends Component {
   NewList()
   {
     return this.state.accdat.map((item,index)=>{
-      let ID=item.id;
+      let ID=`/artDisplay?id=`+ item.id;
       return (
         <div  key={index}>
           <div style={{display: `flex`}}>
@@ -83,6 +75,11 @@ class List extends Component {
       )})
   }
 
+  button()
+  {
+    
+  }
+
   render() {
     // console.log(this.props.listTitle);
     return (
@@ -92,6 +89,10 @@ class List extends Component {
             <div className="list-content-divline"></div>
                <div>
                  {this.NewList()}
+               </div>
+
+               <div>
+                 {this.button()}
                </div>
           </div>
           <Sidebar navData={this.props.nav} parentId={this.props.parentId} />

@@ -68,10 +68,10 @@ const setting = {
             return (
                 
             <div key={index} style={{padding: '30px',width: '30%',display: 'flex',justifyContent:'center',padding:'25px',borderRadius: "15px",border:'1px solid rgba(0,0,0,0.2)',boxShadow: "0px 0px 5px #888888",
-                                      marginLeft:'15%',marginTop:'.5%',marginBottom: '.5%',justifySelf: "stretch",height: '15%'}}>
+                                      marginLeft:'15%',marginTop:'.5%',marginBottom: '.5%',justifySelf: "stretch",height: "400px"}}>
 
                 <div style={{width: '50%',textAlign: `center`}}>
-                    <img src={`https://s3.bmp.ovh/imgs/2022/04/29/22a26d48838b0896.jpg`} style={{width: '80%',borderRadius: "15px",marginTop:`10%`}}/>
+                    <img src={`http://120.48.17.78:8080/api/downLoadFile?fileName=`+item.picName} style={{width: '80%',borderRadius: "15px",marginTop:`10%`}}/>
                 </div> 
 
                 <div style={{display: 'flex',flexDirection: 'column',paddingLeft:'10px',height: '100%',justifyContent: 'space-between',width: '50%'}}>
@@ -80,27 +80,27 @@ const setting = {
                     </div>
                     <br></br>
                     <div>
-                        分管年级：{item.manObj}
+                        分管年级：{item.manaGrade}
                     </div>
                     <br></br>
                     <div>
-                        分管工作：{item.manObj}
+                        分管工作：{item.manaWork}
                     </div>
                     <br></br>
                     <div>
-                        现任职务/类型：总经理、副总经理（总经理助理、总经办主任）销售部长（销售经理、销售业务员）、技术部长（设计主管、工艺主管）、生产部长（计划主管、生产调度主管、车间主任）、物控部长（采购主管、物控仓储主管）；品管部长（体系主管、检验主管）财务部长（会计主管、出纳）人事行政部长（人力资源主管、行政主管）{item.position}
+                        现任职务/类型：{item.position}
                     </div>
                     <br></br>
-                    <div>
+                    {/* <div>
                         手机电话：{item.id}
                     </div>
-                    <br></br>
+                    <br></br> */}
                     <div>
-                       办公电话：{item.workPhone}
+                       办公电话：{item.phoneNum}
                     </div>
                     <br></br>
                     <div>
-                        办公地址：{item.address}
+                        办公地址：{item.officeLocation}
                     </div>
                 </div>
                     

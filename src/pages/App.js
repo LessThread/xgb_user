@@ -15,6 +15,7 @@ import Home from "./xgb-index/Home";
 import Page from "./xgb-static-page/Page";
 import Download from './xgb-static-page/download'
 import Counselors from "./xgb-static-page/Counselors";
+import ArtDisplay from "./xgb-static-page/artDisplay";
 // 以下为废弃代码，这里原本用于测试接口的连通性
 // import Navi from '../test/Navi';
 import "../styles/common/header.scss";
@@ -80,7 +81,7 @@ class App extends React.Component {
       } else if (type === 2) {
         x.menuList.forEach((v) => {
           routeLists.push(
-            <Route path={`/column`}>
+            <Route path={`/list`}>
               <List />
             </Route>
           );
@@ -128,9 +129,9 @@ class App extends React.Component {
                 <Route exact path="/">
                   <Home />
                 </Route>
-                <Route exact path="/article">
+                {/* <Route exact path="/article">
                   <News />
-                </Route>
+                </Route> */}
                 {this.state.isInitial && this.state.naviData
                   ? this.getRoute()
                   : null}
@@ -142,6 +143,9 @@ class App extends React.Component {
                 </Route>
                 <Route exact path="/download">
                   <Download />
+                </Route>
+                 <Route exact path="/artDisplay">
+                  <ArtDisplay />
                 </Route>
               </Switch>
             </div>

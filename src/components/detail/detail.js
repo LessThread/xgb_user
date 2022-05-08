@@ -117,6 +117,7 @@ class Detail extends Component {
           </div>
           <div className="display-content">
             {this.showHtml(content.activity.details)}
+            {/* {activity_details} */}
           </div>
           <div className="files-link">{files}</div>
           <div className="list-content-divline"></div>
