@@ -104,6 +104,7 @@ class Page extends Component {
       from = 15 * (x - 1);
       to = 14 + 15 * (x - 1);
     }
+    
     console.log(
       "page:" +
         this.state.currentPage +
