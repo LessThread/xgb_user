@@ -71,7 +71,7 @@ const setting = {
                                       marginLeft:'15%',marginTop:'.5%',marginBottom: '.5%',justifySelf: "stretch",height: "400px"}}>
 
                 <div style={{width: '60%',textAlign: `center`}}>
-                    <img src={`http://120.48.17.78:8080/api/downLoadFile?fileName=`+item.picName} 
+                    <img src={`http://120.48.17.78:8080/api/downLoadFile/inArticle?fileName=`+item.picName} 
                     style={{width: '80%',borderRadius: "15px",marginTop:`10%`,height: `80%`}}/>
                 </div> 
 

@@ -108,17 +108,17 @@ class App extends React.Component {
         .then((data) => {
           data.data[1].link=`/download`
           //data.data[0].link=`/communication`
-          data.data[0].link=`/list/nav_id?=6`
-          data.data[2].link=`/list/nav_id?=1`
-          data.data[3].link=`/list/nav_id?=2`
+          data.data[0].link=`/list/nav_id?=87`
+          data.data[2].link=`/list/nav_id?=86`
+          data.data[3].link=`/list/nav_id?=89`
           //data.data[4].link=`/introduction`
           data.data[4].menuList[0].link=`/introduction`
           data.data[4].menuList[1].link=`/division`
           data.data[4].menuList[2].link=`/phone`
-          data.data[5].menuList[0].link=`/list/nav_id?=4`
-          data.data[5].menuList[1].link=`/list/nav_id?=5`
+          data.data[5].menuList[0].link=`/alist/nav_id?=83`
+          data.data[5].menuList[1].link=`/list/nav_id?=84`
           data.data[5].menuList[2].link=`/department?id=4`
-          data.data[6].link=`/list/nav_id?=3`
+          data.data[6].link=`/list/nav_id?=85`
           console.log(data.data[1].link)
           this.setState({
             naviData: data.data,
@@ -173,6 +173,9 @@ class App extends React.Component {
                 <Route exact path="/introduction">
                   <Brief/>
                 </Route>
+                <Router exact path="/list">
+                  <List/>
+                </Router>
               </Switch>
             </div>
             <Footer />

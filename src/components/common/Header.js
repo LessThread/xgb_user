@@ -39,10 +39,11 @@ class Header extends React.Component {
     let navArray = [];
     data.forEach((x, i) => {
       let navType = x.type;
-      if (navType === "0" || navType === 0) {
+
+      if (navType === "0" || navType === 0) 
+      {
         //一级栏目是外链
         navArray.push(
-          // <NavDropdown title={x.title} className="nav-dropdown navlink link-on-top">
           <Nav.Link
             className="navlink link-on-top"
             target="_blank"
@@ -51,10 +52,12 @@ class Header extends React.Component {
           >
             {x.title}
           </Nav.Link>
-          // </NavDropdown>
         );
   
-      } else if (navType === "1" || navType === 1) {
+      } 
+
+      else if (navType === "1" || navType === 1) 
+      {
         //一级栏目是列表
         navArray.push(
           <Nav.Link>
@@ -68,7 +71,9 @@ class Header extends React.Component {
             </Link>
           </Nav.Link>
         );
-      } else if (navType === "2" || navType === 2) {
+      } 
+      
+      else if (navType === "2" || navType === 2) {
         //有二级栏目
         let children = x.menuList;
         navArray.push(
