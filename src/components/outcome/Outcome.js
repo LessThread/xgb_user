@@ -24,7 +24,7 @@ class Outcome extends Component {
             for (let index = 0; index < 2; index++) {
                 if (item[index].title !== "") {
                     elements.push(
-                        <a href={`/article?articleId=${item[index].mes_id}&columnId=${item[index].nav_id}`} className="no-dec-link">
+                        <a href={`/artDisplay?id=${item[index].mes_id}`} className="no-dec-link">
                             <Card className="outcome-card">
                                 <div className="outcome-img-box">
                                     <img className="outcome-img" alt="outcome-img" src={this.loadImg(item[index].picture)}></img>
@@ -38,7 +38,7 @@ class Outcome extends Component {
             for (let index = 2; index < item.length; index++) {
                 if (item[index].title !== "") {
                     elements.push(
-                        <a href={`/article?articleId=${item[index].mes_id}&columnId=${item[index].nav_id}`} className="no-dec-link">
+                        <a href={`/artDisplay?id=${item[index].mes_id}`} className="no-dec-link">
                             <Card className="outcome-card wrap-content">
                                 <div className="outcome-img-box">
                                     <img className="outcome-img" alt="outcome-img" src={this.loadImg(item[index].picture)}></img>
@@ -53,7 +53,7 @@ class Outcome extends Component {
             for (let index = 0; index < item.length; index++) {
                 if (item[index].title !== "") {
                     elements.push(
-                        <a href={`/article?articleId=${item[index].mes_id}&columnId=${item[index].nav_id}`} className="no-dec-link">
+                        <a href={`/artDisplay?id=${item[index].mes_id}`} className="no-dec-link">
                             <Card className="outcome-card">
                                 <div className="outcome-img-box">
                                     <img alt="outcome-img" src={this.loadImg(item[index].picture)}></img>

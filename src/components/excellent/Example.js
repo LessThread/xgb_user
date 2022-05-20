@@ -49,7 +49,7 @@ class Examples extends Component {
           console.log("example"+ item[0].mes_id);
           elements.push(
             <a
-              href={`/article?articleId=${item[index].mes_id}&columnId=${item[index].nav_id}`}
+              href={`/artDisplay?id=${item[index].mes_id}`}
               className="no-dec-link"
             >
               <Card className="example-card">
@@ -74,53 +74,6 @@ class Examples extends Component {
         }
       }
     }
-
-    // if (dataLength > 3) {
-    //     for (let index = 0; index < 3; index++) {
-    //         if (item[index].text1 !== "") {
-    //             elements.push(
-    //                 <a href={`/article?articleId=${item[index].mes_id}&columnId=${item[index].nav_id}`} className="no-dec-link">
-    //                     <Card className="example-card">
-    //                         <img alt="bg" className="img-background" src={backImg}></img>
-    //                         <img alt="face" className="img-response" src={this.loadImg(item[index].picture)}></img>
-    //                         <Card.Title className="example-text1">{item[index].content1}</Card.Title>
-    //                         <Card.Text className="example-text2">{item[index].content2}</Card.Text>
-    //                     </Card>
-    //                 </a>
-    //             )
-    //         }
-    //     }
-    //     for (let index = 3; index < item.length; index++) {
-    //         if (item[index].text1 !== "") {
-    //             elements.push(
-    //                 <a href={`/article?articleId=${item[index].mes_id}&columnId=${item[index].nav_id}`} className="no-dec-link">
-    //                     <Card className="example-card wrap-content">
-    //                         <img alt="bg" className="img-background" src={backImg}></img>
-    //                         <img alt="face" className="img-response" src={this.loadImg(item[index].picture)}></img>
-    //                         <Card.Title className="example-text1">{item[index].content1}</Card.Title>
-    //                         <Card.Text className="example-text2">{item[index].content2}</Card.Text>
-    //                     </Card>
-    //                 </a>
-    //             )
-    //         }
-    //     }
-    // }
-    // else {
-    //     for (let index = 0; index < item.length; index++) {
-    //         if (item[index].text1 !== "") {
-    //             elements.push(
-    //                 <a href={`/article?articleId=${item[index].mes_id}&columnId=${item[index].nav_id}`} className="no-dec-link">
-    //                     <Card className="example-card">
-    //                         <img alt="bg" className="img-background" src={backImg}></img>
-    //                         <img alt="face" className="img-response" src={this.loadImg(item[index].picture)}></img>
-    //                         <Card.Title className="example-text1">{item[index].content1}</Card.Title>
-    //                         <Card.Text className="example-text2">{item[index].content2}</Card.Text>
-    //                     </Card>
-    //                 </a>
-    //             )
-    //         }
-    //     }
-    // }
     return elements;
   }
   render() {
@@ -131,7 +84,7 @@ class Examples extends Component {
           <Card.Title className="text-center" id="example-title">
             {this.props.example[0] && this.props.example[0].nav_name
               ? this.props.example[0].nav_name
-              : "获取失败"}
+              : "交流园地"}
           </Card.Title>
           <Card.Subtitle className="text-center" id="example-subtitle">
             {this.props.example[0] && this.props.example[0].description

@@ -63,7 +63,7 @@ class Style4 extends Component {
           <Card className="s4-content-card">
             <a
               className="no-dec-link"
-              href={`/article?articleId=${this.props.s4data.articleList[index].id}&columnId=${this.props.s4data.articleList[index].nav_id}`}
+              href={`/artDisplay?id=${this.props.s4data.articleList[index].id}&columnId=${this.props.s4data.articleList[index].nav_id}`}
             >
               {/* 以下注释在测试后恢复 */}
               <div
@@ -91,7 +91,7 @@ class Style4 extends Component {
           <Card className="s4-content-card wrap-content">
             <a
               className="no-dec-link"
-              href={`/article?articleId=${this.props.s4data.articleList[index].id}&columnId=${this.props.s4data.articleList[index].nav_id}`}
+              href={`/artDisplay?id=${this.props.s4data.articleList[index].id}&columnId=${this.props.s4data.articleList[index].nav_id}`}
             >
               {/* 以下注释在测试后恢复 */}
               <div
@@ -119,7 +119,7 @@ class Style4 extends Component {
           <Card className="s4-content-card wrap-content">
             <a
               className="no-dec-link"
-              href={`/article?articleId=${this.props.s4data.articleList[index].id}&columnId=${this.props.s4data.articleList[index].nav_id}`}
+              href={`/artDisplay?id=${this.props.s4data.articleList[index].id}&columnId=${this.props.s4data.articleList[index].nav_id}`}
             >
               <div
                 className="s4-img"
@@ -148,7 +148,7 @@ class Style4 extends Component {
             <Card.Title className="s4-title">
               {this.props.s4data ? this.props.s4data.title : "？"}
               <a className="more" href={`/column?columnId=${this.props.s4data.nav_id}`}>
-                查看更多
+                查看更多5
               </a>
             </Card.Title>
             <Card.Body id="s4-body">

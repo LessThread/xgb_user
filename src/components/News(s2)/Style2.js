@@ -79,7 +79,7 @@ class Style2 extends Component {
             href={`/column?columnId=${this.props.s2data.upper.nav_id}`}
             className="s2-more"
           >
-            查看更多
+            查看更多1
           </a>
         </Card>
       ) : (
@@ -89,7 +89,7 @@ class Style2 extends Component {
               {this.imgCtrl(
                 this.props.s2data.upArticle.icon,
                 this.props.s2data.upArticle.title,
-                `/article?articleId=${this.props.s2data.upArticle.id}&columnId=${this.props.s2data.upArticle.nav_id}`
+                `/artDisplay?id=${this.props.s2data.upArticle.id}&columnId=${this.props.s2data.upArticle.nav_id}`
               )}
 
             </Card.Body>
@@ -112,7 +112,7 @@ class Style2 extends Component {
             href={`/column?columnId=${this.props.s2data.upArticle.nav_id}`}
             className="s2-more"
           >
-            查看更多
+            查看更多2
           </a>
         </Card>
       )

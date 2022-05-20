@@ -16,7 +16,7 @@ class CarouselTop extends Component {
                         src={ `http://120.48.17.78:8080/` + 
                         this.props.banner[index].picture} fluid></Image>
                         <Carousel.Caption className="carousel-title">
-                            <a href={`/article?articleId=
+                            <a href={`/artDisplay?id=
                             ${this.props.banner[index].mes_id}&columnId=${this.props.banner[index].nav_id}`} 
                             className="no-dec">{this.props.banner[index].title}</a></Carousel.Caption>
                     </div>

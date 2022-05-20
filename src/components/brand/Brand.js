@@ -24,7 +24,7 @@ class Brand extends Component {
             for (let i = 0; i < len; i++) {
                 list.push(
                     <div className="brand-item">
-                        <a href={`/article?articleId=${data[i].mes_id}&columnId=${data[i].navd}`}>
+                        <a href={`/artDisplay?id=${data[i].mes_id}&columnId=${data[i].navd}`}>
                             <img alt="brand-icon" className="response brand-img" 
                             src={this.loadImg(data[i].picture)}></img>
                         </a>

@@ -115,7 +115,7 @@ class App extends React.Component {
           data.data[4].menuList[0].link=`/introduction`
           data.data[4].menuList[1].link=`/division`
           data.data[4].menuList[2].link=`/phone`
-          data.data[5].menuList[0].link=`/alist/nav_id?=83`
+          data.data[5].menuList[0].link=`/list/nav_id?=83`
           data.data[5].menuList[1].link=`/list/nav_id?=84`
           data.data[5].menuList[2].link=`/department?id=4`
           data.data[6].link=`/list/nav_id?=85`

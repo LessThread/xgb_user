@@ -107,7 +107,7 @@ class Sidebar extends Component {
           <div>
             <Card.Text className="sidebar-notice-text">
               <a
-                href={`/article?articleId=${upper[2].articleList[index].id}&columnId=${upper[2].articleList[0].nav_id}`}
+                href={`/artDisplay?id=${upper[2].articleList[index].id}&columnId=${upper[2].articleList[0].nav_id}`}
                 className="no-dec-link"
               >
                 {upper[2].articleList[index].title}
@@ -131,7 +131,7 @@ class Sidebar extends Component {
         lowwer.push(
           <div className="sidebar-brand-limit">
             <a
-              href={`/article?articleId=${data[index].id}&columnId=${data[index].nav_id}`}
+              href={`/artDisplay?id=${data[index].id}&columnId=${data[index].nav_id}`}
             >
               <div
                 className="sidebar-brand-img"

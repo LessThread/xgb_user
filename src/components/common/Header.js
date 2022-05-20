@@ -26,6 +26,7 @@ class Header extends React.Component {
     };
   }
 
+
   handleNavButton() {
     let now = this.state.isNavOpen;
     this.props.toParent(this.state.isNavOpen);
@@ -34,11 +35,14 @@ class Header extends React.Component {
     });
   }
 
+
   getNavigation(data) {
     // console.log("Header:success")
     let navArray = [];
     data.forEach((x, i) => {
       let navType = x.type;
+      console.log(x.title)
+      console.log(x.id)
 
       if (navType === "0" || navType === 0) 
       {
@@ -66,6 +70,7 @@ class Header extends React.Component {
               key="dropdownItem"
               eventKey={"typeB" + x.id}
               to={x.link}
+              //href={x.link}
             >
               {x.title}
             </Link>
@@ -87,15 +92,13 @@ class Header extends React.Component {
                 // console.log(x);
                 if (x.link.substr(0, 1) === "/") {
                   return (
-                    // <NavDropdown.Item>
                     <Link
                       className="nodecb dropdown-item"
-                      key={"typeA" + x.id}
+                      key={"typeC" + x.id}
                       to={x.link}
                     >
                       {x.title}
                     </Link>
-                    // </NavDropdown.Item>
                   );
                 } else {
                   return (
@@ -133,8 +136,26 @@ class Header extends React.Component {
     return navArray;
   }
 
+  componentWillReceiveProps(nextProps) {
+    let url=window.location.href
+    console.log(url)
+    let key=url.indexOf("=",3)
+    console.log(key)
+    if(key>80)
+    {
+      let iurl= window.location.href
+    let index=iurl.indexOf("=",3)
+    iurl=iurl.slice(index+1)
+    iurl=`nav_id?=`+iurl
+    console.log(iurl)
+    window.location.href=iurl
+    }
+
+    
+
+   }
+
   render() {
-    // console.log("isNavOpen?=" + this.state.isNavOpen)
     return (
       <Nav
         className="tju-navbar"
@@ -156,9 +177,11 @@ class Header extends React.Component {
                 首页
               </Nav.Link>
             </Nav.Item>
+
             {this.props.isReady && this.props.data
               ? this.getNavigation(this.props.data)
               : null}
+
             {document.body.clientWidth <= 1024 ? (
               <HiddenNav
                 isOpen={this.state.isNavOpen}
@@ -167,9 +190,10 @@ class Header extends React.Component {
                 isReady={this.props.isReady}
               />
             ) : null}
-            {/* <HiddenNav isOpen={this.state.isNavOpen} navData={this.props.data} logoimg={logo} isReady={this.props.isReady} /> */}
+    
           </div>
         </Navbar>
+
         <div className="menu-btn" onClick={this.handleNavButton.bind(this)}>
           {this.state.isNavOpen ? (
             <div>
@@ -185,6 +209,7 @@ class Header extends React.Component {
             </div>
           )}
         </div>
+
       </Nav>
     );
   }

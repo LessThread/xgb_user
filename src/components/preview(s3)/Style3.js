@@ -21,7 +21,7 @@ class Style3 extends Component {
     if (this.props.s3data) {
       moreLink = this.props.s3data.nav_id;
       return (
-        <Button href={`/column?columnId=` + moreLink} className="s3-view-more">
+        <Button href={`/list/nav_id?=85`} className="s3-view-more">
           查看更多
         </Button>
       );
@@ -103,7 +103,7 @@ class Style3 extends Component {
               <div className="s3-right col-md-9">
                 <Card.Title className="s3-text">
                   <a
-                    href={`/article?articleId=${renderList[index].id}&columnId=${renderList[index].nav_id}`}
+                    href={`/artDisplay?id=${renderList[index].id}`}
                     className="no-dec-link"
                   >
                     {renderList[index].title}

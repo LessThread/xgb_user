@@ -77,7 +77,7 @@ class Style1 extends Component {
             for (let index = foldLine; index < dataLength; index++) {
                 elements.push(
                     <div className="s1-sm-text">
-                        <a href={`/article?articleId=${renderList[index].id}&columnId=${renderList[index].nav_id}`} className={this.styleCtrl().s1smtext}>
+                        <a href={`/artDisplay?id=${renderList[index].id}`} className={this.styleCtrl().s1smtext}>
                             {renderList[index].title}
                         </a>
                         <div className={this.styleCtrl().s1smdate}>
@@ -95,7 +95,7 @@ class Style1 extends Component {
                         <div className="s1-headline">
                             {this.props.s1data.menuList ?
                                 <Card.Text id="s1-lg-text">
-                                    <a href={`/article?articleId=${this.props.s1data.menuList[0].id}&columnId=${this.props.s1data.menuList[0].nav_id}`} className="no-dec-link">
+                                    <a href={`/artDisplay?id=${this.props.s1data.menuList[0].id}&columnId=${this.props.s1data.menuList[0].nav_id}`} className="no-dec-link">
                                         {this.props.s1data.menuList[0].title}
                                         <img alt="new" className="newIcon" src={newIcon}></img>
                                     </a>
@@ -108,7 +108,7 @@ class Style1 extends Component {
                         <div className="s1-content-group">
                             {elements}
                         </div>
-                        <Button href={"/column?columnId=" + this.props.s1data.nav_id} className="s1-view-more">查看更多</Button>
+                        <Button href={"/column?columnId=" + this.props.s1data.nav_id} className="s1-view-more">查看更多3</Button>
                     </div> : <p>获取失败</p>}
             </Card>
         )
