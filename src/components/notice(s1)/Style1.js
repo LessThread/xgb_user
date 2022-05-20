@@ -63,7 +63,7 @@ class Style1 extends Component {
         for (let index = 1; index < foldLine; index++) {
             elements.push(
                 <div className="s1-sm-text">
-                    <a href={`/article?articleId=${renderList[index].id}&columnId=${renderList[index].nav_id}`} className={this.styleCtrl().s1smtext}>
+                    <a href={`/artDisplay?id=${renderList[index].id}` } className={this.styleCtrl().s1smtext}>
                         {renderList[index].title}
                     </a>
                     <div className={this.styleCtrl().s1smdate}>

@@ -16,7 +16,7 @@ class Style2 extends Component {
   loadImg(url) {
     if (url !== "null") {
       console.log("..."+ url)
-      return BaseUrl +"downLoadFile?fileName=" + url;
+      return `http://120.48.17.78:8080/` + url;
     } else {
       return defaultImg;
     }
@@ -60,7 +60,7 @@ class Style2 extends Component {
               {this.imgCtrl(
                 this.props.s2data.upArticle.picture,
                 this.props.s2data.upper.navTitle,
-                `/article?articleId=${this.props.s2data.upper.id}&columnId=${this.props.s2data.upper.navId}`
+                `/artDisplay?id=${this.props.s2data.upper.id}`
               )}
             </Card.Body>
             <Card.Body id="s2-content" className="col-md-4">

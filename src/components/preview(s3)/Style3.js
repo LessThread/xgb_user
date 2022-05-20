@@ -54,7 +54,7 @@ class Style3 extends Component {
               <div className="s3-right col-md-9">
                 <Card.Title className="s3-text">
                   <a
-                    href={`/article?articleId=${renderList[index].id}&columnId=${renderList[index].nav_id}`}
+                    href={`/artDisplay?id=${renderList[index].id}`}
                     className="no-dec-link"
                   >
                     {renderList[index].title}

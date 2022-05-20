@@ -13,7 +13,7 @@ class CarouselTop extends Component {
                 <Carousel.Item>
                     <div className="w1000">
                         <Image className="index-carousel-img" 
-                        src={ `http://120.48.17.78:8080/api/downLoadFile?fileName=` + 
+                        src={ `http://120.48.17.78:8080/` + 
                         this.props.banner[index].picture} fluid></Image>
                         <Carousel.Caption className="carousel-title">
                             <a href={`/article?articleId=

@@ -15,7 +15,7 @@ class Style4 extends Component {
   loadImg(url) {
     if (url !== "null") {
       console.log("..."+ url);
-      return BaseUrl +"downLoadFile?fileName=" + url;
+      return `http://120.48.17.78:8080/` + url;
     } else {
       return defaultImg;
     }
@@ -33,7 +33,7 @@ class Style4 extends Component {
           <Card className="s4-content-card">
             <a
               className="no-dec-link"
-              href={`/article?articleId=${this.props.s4data.upArticle.id}&columnId=${this.props.s4data.upArticle.nav_id}`}
+              href={`/artDisplay?id=${this.props.s4data.upArticle.id}`}
             >
               {/* 以下注释在测试后恢复 */}
               <div
@@ -146,7 +146,7 @@ class Style4 extends Component {
         {this.props.isLoaded ? (
           <div>
             <Card.Title className="s4-title">
-              {this.props.s4data ? this.props.s4data.title : "获取失败"}
+              {this.props.s4data ? this.props.s4data.title : "？"}
               <a className="more" href={`/column?columnId=${this.props.s4data.nav_id}`}>
                 查看更多
               </a>
