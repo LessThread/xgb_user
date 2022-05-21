@@ -186,7 +186,8 @@ class Sidebar extends Component {
             <div className="sidebar-list">
               {this.renderSidebarAct()}
               <a
-                href={`/column?columnId=${this.state.noticeData[2].nav_id}`}
+                href={`/list/nav_id=
+                ${this.state.noticeData[2].nav_id}`}
                 className="sidebar-more"
               >
                 查看更多
