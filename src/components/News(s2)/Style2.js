@@ -76,7 +76,7 @@ class Style2 extends Component {
             </Card.Body>
           </div>
           <a
-            href={`/column?columnId=${this.props.s2data.upper.nav_id}`}
+            href={`/artDisplay?id=${this.props.s2data.upper.nav_id}`}
             className="s2-more"
           >
             查看更多1

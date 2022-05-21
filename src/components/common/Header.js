@@ -141,9 +141,11 @@ class Header extends React.Component {
     console.log(url)
     let key=url.indexOf("=",3)
     console.log(key)
-    if(key>80)
+    if(key===35){console.log(key)}
+    else if(key>30)
     {
-      let iurl= window.location.href
+    console.log("YES")
+    let iurl= window.location.href
     let index=iurl.indexOf("=",3)
     iurl=iurl.slice(index+1)
     iurl=`nav_id?=`+iurl

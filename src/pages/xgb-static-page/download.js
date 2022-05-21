@@ -63,7 +63,7 @@ class Page extends Component {
         list.push(
           <li className="down-item">
             <a
-              href={`http://120.48.17.78:8080/api/downLoadFile?fileName=${data[i]["realName"]}`}
+              href={`http://120.48.17.78:8080/api/downLoadFile/inZone?fileName=${data[i]["id"]}`}
               className="down-filename"
             >
               {data[i]["realName"]}

@@ -35,38 +35,38 @@ class XgbList extends Component {
 
   getNavTitleById(targetId, data) {
     //根据导航栏数据，用id匹配相应的标题
-    // if (data)
-    //   for (let i = 0; i < data.length; i++) {
-    //     if (data[i].type === "2" || data[i].type === "1") {
-    //       if (data[i].menuList) {
-    //         for (let j = 0; j < data[i].menuList.length; j++) {
-    //           if (
-    //             data[i].menuList[j].link &&
-    //             data[i].menuList[j].type === "1"
-    //           ) {
-    //             let query = data[i].menuList[j].link;
-    //             let vars = query.split("?")[1].split("&");
-    //             for (let i = 0; i < vars.length; i++) {
-    //               let pair = vars[i].split("=");
-    //               if (pair[0] === "columnId" && pair[1] === targetId) {
-    //                 if (data[i].title) {
-    //                   return data[i].title;
-    //                 } else {
-    //                   return "未命名导航";
-    //                 }
-    //               }
-    //             }
-    //           } else {
-    //             console.log("Error:A column is supposed to have a link");
-    //           }
-    //         }
-    //       } else {
-    //         console.log("Error:Exist father nav without son");
-    //       }
-    //     } else {
-    //       console.log("Error:A column is supposed to have a link");
-    //     }
-    //   }
+    if (data)
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].type === "2" || data[i].type === "1") {
+          if (data[i].menuList) {
+            for (let j = 0; j < data[i].menuList.length; j++) {
+              if (
+                data[i].menuList[j].link &&
+                data[i].menuList[j].type === "1"
+              ) {
+                let query = data[i].menuList[j].link;
+                let vars = query.split("?")[1].split("&");
+                for (let i = 0; i < vars.length; i++) {
+                  let pair = vars[i].split("=");
+                  if (pair[0] === "columnId" && pair[1] === targetId) {
+                    if (data[i].title) {
+                      return data[i].title;
+                    } else {
+                      return "未命名导航";
+                    }
+                  }
+                }
+              } else {
+                console.log("Error:A column is supposed to have a link");
+              }
+            }
+          } else {
+            console.log("Error:Exist father nav without son");
+          }
+        } else {
+          console.log("Error:A column is supposed to have a link");
+        }
+      }
     return false;
   }
   
@@ -79,69 +79,69 @@ class XgbList extends Component {
 
   getTitleById(targetId, data) {
     //根据导航栏数据，用id匹配相应的标题
-    // console.log(targetId)
-    // if (data) {
-    // //   console.log(data);
-    //   for (let i = 0; i < data.length; i++) {
-    //     if (data[i].type === "2") {
-    //       if (data[i].menuList) {
-    //         for (let j = 0; j < data[i].menuList.length; j++) {
-    //           if (
-    //             data[i].menuList[j].link &&
-    //             data[i].menuList[j].type === "1"
-    //           ) {
-    //             let query = data[i].menuList[j].link;
-    //             let vars = query.split("?")[1].split("&");
-    //             for (let index = 0; index < vars.length; index++) {
-    //               let pair = vars[index].split("=");
-    //               if (
-    //                 pair[0] === "columnId" &&
-    //                 pair[1] === targetId.toString()
-    //               ) {
-    //                 // console.log(data[i].menuList[j]);
-    //                 if (data[i].menuList[j] && data[i].menuList[j].title) {
-    //                   return data[i].menuList[j];
-    //                 } else {
-    //                   return "未命名栏目";
-    //                 }
-    //               }
-    //             }
-    //           } else {
-    //             console.log("Error:A column is supposed to have a link");
-    //           }
-    //         }
-    //       } else {
-    //         console.log("Error:Exist father nav without son");
-    //       }
-    //     } else if (data[i].link && data[i].type === "1") {
-    //       //   console.log(data[i].link);
-    //     //   console.log(this.getLinkParam(data[i].link, "columnId"));
-    //     //   console.log(targetId)
-    //       if (this.getLinkParam(data[i].link, "columnId") === targetId) {
-    //         console.log(data[i]);
-    //         return data[i];
-    //       }
+    console.log(targetId)
+    if (data) {
+    //   console.log(data);
+      for (let i = 0; i < data.length; i++) {
+        if (data[i].type === "2") {
+          if (data[i].menuList) {
+            for (let j = 0; j < data[i].menuList.length; j++) {
+              if (
+                data[i].menuList[j].link &&
+                data[i].menuList[j].type === "1"
+              ) {
+                let query = data[i].menuList[j].link;
+                let vars = query.split("?")[1].split("&");
+                for (let index = 0; index < vars.length; index++) {
+                  let pair = vars[index].split("=");
+                  if (
+                    pair[0] === "columnId" &&
+                    pair[1] === targetId.toString()
+                  ) {
+                    // console.log(data[i].menuList[j]);
+                    if (data[i].menuList[j] && data[i].menuList[j].title) {
+                      return data[i].menuList[j];
+                    } else {
+                      return "未命名栏目";
+                    }
+                  }
+                }
+              } else {
+                console.log("Error:A column is supposed to have a link");
+              }
+            }
+          } else {
+            console.log("Error:Exist father nav without son");
+          }
+        } else if (data[i].link && data[i].type === "1") {
+          //   console.log(data[i].link);
+        //   console.log(this.getLinkParam(data[i].link, "columnId"));
+        //   console.log(targetId)
+          if (this.getLinkParam(data[i].link, "columnId") === targetId) {
+            console.log(data[i]);
+            return data[i];
+          }
 
-    //       //   let query = data[i].link;
-    //       //   let vars = query.split("?")[1].split("&");
-    //       //   for (let j = 0; j < vars.length; j++) {
-    //       //     let pair = vars[j].split("=");
-    //       //     // console.log(pair);
-    //       //     // console.log(targetId);
-    //       //     console.log(data[i]);
-    //       //     if (pair[0] === "columnId" && pair[1] === targetId.toString()) {
-    //       //       if (data[i].title) {
-    //       //         return data[i].title;
-    //       //       } else {
-    //       //         return "未命名栏目";
-    //       //       }
-    //       //     }
-    //       //   }
-    //     } else {
-    //       console.log("Error:A column is supposed to have a link");
-    //     }
-    //   }
-    // }
+          //   let query = data[i].link;
+          //   let vars = query.split("?")[1].split("&");
+          //   for (let j = 0; j < vars.length; j++) {
+          //     let pair = vars[j].split("=");
+          //     // console.log(pair);
+          //     // console.log(targetId);
+          //     console.log(data[i]);
+          //     if (pair[0] === "columnId" && pair[1] === targetId.toString()) {
+          //       if (data[i].title) {
+          //         return data[i].title;
+          //       } else {
+          //         return "未命名栏目";
+          //       }
+          //     }
+          //   }
+        } else {
+          console.log("Error:A column is supposed to have a link");
+        }
+      }
+    }
     return false;
   }
 
