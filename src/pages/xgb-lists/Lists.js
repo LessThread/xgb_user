@@ -70,12 +70,6 @@ class XgbList extends Component {
     return false;
   }
   
-  getLinkParam(link, name) {
-    // var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-    // var r = link.split("?")[1].substr(0).match(reg);
-    // if (r != null) return decodeURI(r[2]);
-    // return null;
-  }
 
   getTitleById(targetId, data) {
     //根据导航栏数据，用id匹配相应的标题
@@ -114,29 +108,10 @@ class XgbList extends Component {
             console.log("Error:Exist father nav without son");
           }
         } else if (data[i].link && data[i].type === "1") {
-          //   console.log(data[i].link);
-        //   console.log(this.getLinkParam(data[i].link, "columnId"));
-        //   console.log(targetId)
           if (this.getLinkParam(data[i].link, "columnId") === targetId) {
             console.log(data[i]);
             return data[i];
           }
-
-          //   let query = data[i].link;
-          //   let vars = query.split("?")[1].split("&");
-          //   for (let j = 0; j < vars.length; j++) {
-          //     let pair = vars[j].split("=");
-          //     // console.log(pair);
-          //     // console.log(targetId);
-          //     console.log(data[i]);
-          //     if (pair[0] === "columnId" && pair[1] === targetId.toString()) {
-          //       if (data[i].title) {
-          //         return data[i].title;
-          //       } else {
-          //         return "未命名栏目";
-          //       }
-          //     }
-          //   }
         } else {
           console.log("Error:A column is supposed to have a link");
         }
@@ -167,16 +142,16 @@ class XgbList extends Component {
       .catch((e) => console.log("错误:", e));
   }
 
-  componentWillReceiveProps() {
-    let column = getQueryVariable("columnId");
-    let nData = this.state.naviData;
-    this.setState({
-      columnId: column, //二级导航id
-      listTitle: this.getTitleById(column, nData).title, //二级导航名称
-      parentId: this.getTitleById(column, nData).parent_id, //父级id
-      navTitle: this.getNavTitleById(column, nData), //一级导航名称
-    });
-  }
+  // componentWillReceiveProps() {
+  //   let column = getQueryVariable("columnId");
+  //   let nData = this.state.naviData;
+  //   this.setState({
+  //     columnId: column, //二级导航id
+  //     listTitle: this.getTitleById(column, nData).title, //二级导航名称
+  //     parentId: this.getTitleById(column, nData).parent_id, //父级id
+  //     navTitle: this.getNavTitleById(column, nData), //一级导航名称
+  //   });
+  // }
 
   render() {
     return (
