@@ -174,6 +174,7 @@ class Sidebar extends Component {
 
   render() {
     return (
+      <div style={{ marginLeft: `75%` ,zIndex:`999`,width: `400px` ,marginTop: `-900px`,height:`800px`,backgroundColor:`red` }}>
       <div className="sidebar col-md-3">
         {this.props.navData ? this.getColumnLevel(this.props.navData) : null}
         {this.state.noticeData && this.state.noticeData[2] ? (
@@ -186,8 +187,8 @@ class Sidebar extends Component {
             <div className="sidebar-list">
               {this.renderSidebarAct()}
               <a
-                href={`/list/nav_id=
-                ${this.state.noticeData[2].nav_id}`}
+                href={`/list/nav_id=89
+                `}
                 className="sidebar-more"
               >
                 查看更多
@@ -209,6 +210,7 @@ class Sidebar extends Component {
             </div>
           </Card>
         ) : null}
+      </div>
       </div>
     );
   }

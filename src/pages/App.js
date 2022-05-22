@@ -16,6 +16,8 @@ import Page from "./xgb-static-page/Page";
 import Download from './xgb-static-page/download'
 import Counselors from "./xgb-static-page/Counselors";
 import ArtDisplay from "./xgb-static-page/artDisplay";
+import Collge from "./xgb-static-page/学院导航";
+import Sidebar from "../components/common/Sidebar";
 // 以下为废弃代码，这里原本用于测试接口的连通性
 // import Navi from '../test/Navi';
 import "../styles/common/header.scss";
@@ -46,13 +48,7 @@ const setting = {
   cache: "default",
 };
 
-//这是栏目列表
-// function CateList() {
-//     let { id } = useParams();
-//     return (
-//         <List />
-//     )
-// }
+
 
 class App extends React.Component {
   constructor(props) {
@@ -64,6 +60,17 @@ class App extends React.Component {
       childValue: false,
       isInitial: false,
     };
+  }
+
+  Side(){
+    console.log(window.location.href)
+    let iurl= window.location.href
+    let index=iurl.indexOf("=",3)
+    iurl=iurl.slice(index+1)
+   // alert(index)
+
+    if(index!==-1)
+    return <Sidebar></Sidebar>
   }
 
   getChildInfo = (value) => {
@@ -117,7 +124,7 @@ class App extends React.Component {
           data.data[4].menuList[2].link=`/phone`
           data.data[5].menuList[0].link=`/list/nav_id?=83`
           data.data[5].menuList[1].link=`/list/nav_id?=84`
-          data.data[5].menuList[2].link=`/department?id=4`
+          data.data[5].menuList[2].link=`/Fdepartment`
           data.data[6].link=`/list/nav_id?=85`
           console.log(data.data[1].link)
           this.setState({
@@ -134,6 +141,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="slide-away">
+        
         {this.state.naviData ? (
           <div>
             <Header
@@ -142,18 +150,20 @@ class App extends React.Component {
               isReady={this.state.isInitial}
             />
             <div id="main">
+           
               <Switch>
                 <Route exact path="/">
                   <Home />
                 </Route>
-                {/* <Route exact path="/article">
-                  <News />
-                </Route> */}
+
+
                 {this.state.isInitial && this.state.naviData
                   ? this.getRoute()
                   : null}
-                <Route exact path="/department">
-                  <Page />
+                  
+                  
+                <Route exact path="/Fdepartment">
+                  <Collge/>
                 </Route>
                 <Route exact path="/counselors">
                   <Counselors/>
@@ -177,8 +187,11 @@ class App extends React.Component {
                   <List/>
                 </Router>
               </Switch>
+
+              <div id="bxx" >{this.Side()}</div>
             </div>
             <Footer />
+            
           </div>
         ) : (
           <Load />

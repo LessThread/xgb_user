@@ -93,8 +93,8 @@ class Style1 extends Component {
                         <div className="s1-headline">
                             {1?
                                 <Card.Text id="s1-lg-text">
-                                    <a href={`/artDisplay?id=${this.props.s1data.articleList[0].id}`} className="no-dec-link">
-                                        {this.props.s1data.articleList[0].title}
+                                    <a href={`/artDisplay?id=${this.props.s1data.upper.mes_id}`} className="no-dec-link">
+                                        {this.props.s1data.upper.articleTitle}
                                         <img alt="new" className="newIcon" src={newIcon}></img>
                                     </a>
                                     <div className="s1-lg-date">
@@ -106,7 +106,7 @@ class Style1 extends Component {
                         <div className="s1-content-group">
                             {elements}
                         </div>
-                        <Button href={"/list/nav_id?=" + this.props.s1data.nav_id} 
+                        <Button href={"/list/nav_id?=86"} 
                         className="s1-view-more">查看更多</Button>
                     </div> : <p>获取失败</p>}
             </Card>

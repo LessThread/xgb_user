@@ -143,7 +143,7 @@ class Style3 extends Component {
         {this.props.isLoaded ? (
           <div>
             <Card.Title className="s3-title">
-              {this.props.s3data ? this.props.s3data.title : "获取失败"}
+              {this.props.s3data ? this.props.s3data.upper.navTitle : "获取失败"}
             </Card.Title>
             <Card.Body id="s3-content">
               {elements}

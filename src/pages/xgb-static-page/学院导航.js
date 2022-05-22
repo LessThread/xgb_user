@@ -9,6 +9,7 @@ class Collge extends Component {
   render() {
     console.log("##")
     return (
+      <div className="overall">
       <div style={{
         display: 'flex',
         alignItems: 'center',
@@ -50,6 +51,7 @@ class Collge extends Component {
                 <div style={{ textAlign: "left" ,padding: '20px', width: '30%'}}><a href="Counselors?id=分子聚集态科学研究院" class='no-dec-link'>28. 分子聚集态科学研究院</a></div>
                 <div style={{ textAlign: "left" ,padding: '20px', width: '30%'}}><a href="Counselors?id=宣怀学院" class='no-dec-link'>29. 宣怀学院</a></div>
 
+    </div>
     </div>
     );
   }

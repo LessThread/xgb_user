@@ -89,7 +89,7 @@ render()
         </div>
 
         <div class="sidebar">
-        <Sidebar></Sidebar>
+        {/* <Sidebar></Sidebar> */}
        </div>
 
       </div>

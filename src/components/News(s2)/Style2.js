@@ -24,6 +24,9 @@ class Style2 extends Component {
 
   imgCtrl(url, title, link) {
     let wid = document.body.clientWidth;
+    let Btitle = this.props.s2data.upper.articleTitle
+    let Atitle=this.props.s2data.upper.navTitle
+   // alert(Btitle)
     if (wid <= 768) {
       return (
         <a href={link} className="s2-img-with-title">
@@ -33,7 +36,7 @@ class Style2 extends Component {
             }}
             className="s2-img"
           ></div>
-          <Card.Text className="s2-text1">{title}</Card.Text>
+          <Card.Text className="s2-text1">{Atitle}</Card.Text>
         </a>
       );
     } else {
@@ -45,7 +48,7 @@ class Style2 extends Component {
             }}
             className="s2-img"
           ></div>
-          <Card.Text className="s2-text1">{title}</Card.Text>
+          <Card.Text className="s2-text1">{Btitle}</Card.Text>
         </div>
       );
     }
@@ -64,7 +67,7 @@ class Style2 extends Component {
               )}
             </Card.Body>
             <Card.Body id="s2-content" className="col-md-4">
-              <Card.Title id="s2-title">{this.props.s2data.title}</Card.Title>
+              <Card.Title id="s2-title">{this.props.s2data.upper.navTitle}</Card.Title>
               <Card.Text className="s2-date">
                 {this.props.s2data.upper.createdAt}
               </Card.Text>
@@ -94,7 +97,7 @@ class Style2 extends Component {
 
             </Card.Body>
             <Card.Body id="s2-content" className="col-md-4">
-              <Card.Title id="s2-title">{this.props.s2data.upper.nav_id}</Card.Title>
+              <Card.Title id="s2-title">{this.props.s2data.upper.articleTitle}</Card.Title>
               <Card.Text className="s2-date">
                 {this.props.s2data.upArticle.createdAt}
               </Card.Text>

@@ -159,7 +159,7 @@ class List extends Component {
                  {this.button()}
                </div>
           </div>
-          <Sidebar navData={this.props.nav} parentId={this.props.parentId} />
+          {/* <Sidebar navData={this.props.nav} parentId={this.props.parentId} /> */}
         </div>
       </div>
     );
