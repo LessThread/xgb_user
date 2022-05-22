@@ -84,6 +84,7 @@ class Home extends Component {
             .catch(e => console.log('错误码:', e))
     }
     render() {
+        console.log(this.state.noticeData)
         return (
             <div className="overall">
                 {this.state.bannerData ? <Carousel banner={this.state.bannerData} /> : null}

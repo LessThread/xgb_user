@@ -136,6 +136,8 @@ class Style3 extends Component {
         }
       }
     }
+
+    console.log("&&&&&&&&&&&"+renderList[2].speaker);
     return (
       <Card id="s3-card" className="col-md-4">
         {this.props.isLoaded ? (

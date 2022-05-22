@@ -79,7 +79,7 @@ class Style2 extends Component {
             href={`/artDisplay?id=${this.props.s2data.upper.nav_id}`}
             className="s2-more"
           >
-            查看更多1
+            查看更多
           </a>
         </Card>
       ) : (
@@ -112,7 +112,7 @@ class Style2 extends Component {
             href={`/column?columnId=${this.props.s2data.upArticle.nav_id}`}
             className="s2-more"
           >
-            查看更多2
+            查看更多
           </a>
         </Card>
       )

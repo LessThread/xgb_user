@@ -47,8 +47,6 @@ class Style1 extends Component {
             }
         }
         const elements = [];
-        // console.log(this.props.s1data)
-        // console.log(this.props.s1data.menuList[0].createdAt)
         let dataLength = 0, foldLine = 0
         if (this.props.s1data && renderList) {
             dataLength = renderList.length;
@@ -91,16 +89,16 @@ class Style1 extends Component {
             <Card id="s1-card" className="col-md-4">
                 {this.props.isLoaded && this.props.s1data ?
                     <div>
-                        <div className="s1-title">{this.props.s1data.title}</div>
+                        <div className="s1-title">{this.props.s1data.upper.navTitle}</div>
                         <div className="s1-headline">
-                            {this.props.s1data.menuList ?
+                            {1?
                                 <Card.Text id="s1-lg-text">
-                                    <a href={`/artDisplay?id=${this.props.s1data.menuList[0].id}&columnId=${this.props.s1data.menuList[0].nav_id}`} className="no-dec-link">
-                                        {this.props.s1data.menuList[0].title}
+                                    <a href={`/artDisplay?id=${this.props.s1data.articleList[0].id}`} className="no-dec-link">
+                                        {this.props.s1data.articleList[0].title}
                                         <img alt="new" className="newIcon" src={newIcon}></img>
                                     </a>
                                     <div className="s1-lg-date">
-                                        {this.props.s1data.menuList[0].createdAt ? this.props.s1data.menuList[0].createdAt.substring(5, 10) : null}
+                                        {this.props.s1data.articleList[0].createdAt ? this.props.s1data.articleList[0].createdAt.substring(5, 10) : null}
                                     </div>
                                 </Card.Text>
                                 : null}
@@ -108,7 +106,8 @@ class Style1 extends Component {
                         <div className="s1-content-group">
                             {elements}
                         </div>
-                        <Button href={"/column?columnId=" + this.props.s1data.nav_id} className="s1-view-more">查看更多3</Button>
+                        <Button href={"/list/nav_id?=" + this.props.s1data.nav_id} 
+                        className="s1-view-more">查看更多</Button>
                     </div> : <p>获取失败</p>}
             </Card>
         )

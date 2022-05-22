@@ -147,8 +147,8 @@ class Style4 extends Component {
           <div>
             <Card.Title className="s4-title">
               {this.props.s4data ? this.props.s4data.title : "？"}
-              <a className="more" href={`/column?columnId=${this.props.s4data.nav_id}`}>
-                查看更多5
+              <a className="more" href={`/list/nav_id?==${this.props.s4data.nav_id}`}>
+                查看更多
               </a>
             </Card.Title>
             <Card.Body id="s4-body">
