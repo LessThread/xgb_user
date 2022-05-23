@@ -1,0 +1,36 @@
+// @keyframes mymove {
+
+//     from {
+//       display: block;
+
+//     }
+
+//     to {
+//      display: none;
+
+//     }
+
+//   }
+
+
+//background: rgba(0,0,0,0),
+
+
+@keyframes mymove
+{
+  0% {height: 100em;width:100em;}
+  100% {height: 1px;background: rgba(0,0,0,0)}
+// from {display:block;}
+// to {display: none;}
+}
+
+
+// @keyframes mymove
+// {
+//   0%{background-color: red;
+//     z-index: 999;}
+//   100%{z-index: -999;}
+// }
+//  k{
+//    position: absolute;
+//  }

@@ -28,6 +28,8 @@ import { SrcUrl, BaseUrl } from "../components/BaseUrl";
 import Leader from "./xgb-static-page/领导分工";
 import Tel from "./xgb-static-page/办公电话";
 import Brief from "./xgb-static-page/部门简介";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import '../styles/fix.scss'
 
 
 //根据导航到的数据
@@ -59,6 +61,7 @@ class App extends React.Component {
       errorMessage: "",
       childValue: false,
       isInitial: false,
+      index: 1,
     };
   }
 
@@ -148,9 +151,25 @@ class App extends React.Component {
     }
   }
 
+  fix(){
+    
+  }
+
   render() {
+
+    setTimeout(() => {
+      
+    }, 1000,);
+    this.fix();
+
+
     return (
       <div className="slide-away">
+       
+        <div className="fix hidetip"  style={{animationName:`mymove`,animationDuration: `3s`,
+        position:`absolute`,zIndex: 999,
+        backgroundColor:`white`,
+      }}></div>
         
         {this.state.naviData ? (
           <div>
