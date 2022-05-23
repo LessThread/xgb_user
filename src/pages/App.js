@@ -62,6 +62,16 @@ class App extends React.Component {
     };
   }
 
+  
+
+  foot()
+  {  
+    console.log("\n\n\n\n\n\n\n222222222222222")
+    
+    return <Footer />
+  }
+
+
   Side(){
     console.log(window.location.href)
     let iurl= window.location.href
@@ -204,7 +214,7 @@ class App extends React.Component {
 
               
             </div>
-            <Footer />
+            {this.foot() }
             
           </div>
         ) : (

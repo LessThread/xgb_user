@@ -1,7 +1,7 @@
 import React from "react";
 import { Nav, NavDropdown, Navbar } from "react-bootstrap";
 import {
-  Route,
+  HashRouter,
   Switch,
   Redirect,
   Router,
