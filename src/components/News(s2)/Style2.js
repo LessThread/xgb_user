@@ -57,7 +57,7 @@ class Style2 extends Component {
   render() {
     return this.props.isLoaded && this.props.s2data ? (
       this.props.s2data.upper ? (
-        <Card id="s2-card" className="col-md-6">
+        <Card id="s2-card" className="col-md-6" style={{zIndex: `9999`}}>
           <div id="s2-component">
             <Card.Body id="s2-img-container" className="col-md-8">
               {this.imgCtrl(

@@ -174,7 +174,9 @@ class Sidebar extends Component {
 
   render() {
     return (
-      <div style={{ marginLeft: `75%` ,zIndex:`999`,width: `400px` ,marginTop: `-900px`,height:`800px`,backgroundColor:`red` }}>
+      <div style={{ marginLeft:`85%`
+
+      }}>
       <div className="sidebar col-md-3">
         {this.props.navData ? this.getColumnLevel(this.props.navData) : null}
         {this.state.noticeData && this.state.noticeData[2] ? (

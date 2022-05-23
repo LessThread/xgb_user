@@ -67,8 +67,8 @@ class App extends React.Component {
     let iurl= window.location.href
     let index=iurl.indexOf("=",3)
     iurl=iurl.slice(index+1)
-   // alert(index)
-
+    //alert(index)
+    if(index===35)return
     if(index!==-1)
     return <Sidebar></Sidebar>
   }
@@ -144,17 +144,31 @@ class App extends React.Component {
         
         {this.state.naviData ? (
           <div>
+            
+            <div>
+
             <Header
               data={this.state.naviData}
               toParent={this.getChildInfo.bind(this)}
               isReady={this.state.isInitial}
             />
-            <div id="main">
-           
+
+            </div>
+            
+            <div id="main" style={{zIndex:`-1`}}>
+
+              <div style={{zIndex: `0`,height: `10px`}}>
+                <div style={{height: `150pt`}}></div>
+
+              {this.Side()}
+
+              </div>
+
               <Switch>
                 <Route exact path="/">
                   <Home />
                 </Route>
+                
 
 
                 {this.state.isInitial && this.state.naviData
@@ -188,7 +202,7 @@ class App extends React.Component {
                 </Router>
               </Switch>
 
-              <div id="bxx" >{this.Side()}</div>
+              
             </div>
             <Footer />
             
