@@ -21,6 +21,8 @@ class artDisplay extends Component
             art:'',
             tit:``,
             det: ``,
+            type: ``,
+            data: ``,
         }
     }
 
@@ -41,9 +43,11 @@ class artDisplay extends Component
                 console.log("@")
                 console.log(res)
                 this.setState({
+                    data: res.data,
                     art: res.data.details,
                     tit: res.data.title,
                     //det: res.data.details
+                    type: res.data.article_type,
                 })
                 console.log(this.state.art)
               })
@@ -57,6 +61,27 @@ text()
   return (
     <div dangerouslySetInnerHTML={html}></div>
   )
+}
+
+atrType()
+{
+  if(this.state.type===`message`)
+  {
+    return(
+      <div>
+        {this.state.data.person}
+      </div>
+    )
+  }
+
+  else if(this.state.type===`article`)
+  {
+    return(
+      <div>
+        {this.state.data.person}
+      </div>
+    )
+  }
 }
 
 title()
