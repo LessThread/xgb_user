@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { config } from "react-transition-group";
 import Sidebar from "../../components/common/Sidebar";
 
 const setting = {
@@ -21,7 +22,7 @@ class artDisplay extends Component
             art:'',
             tit:``,
             det: ``,
-            type: ``,
+            type: "",
             data: ``,
         }
     }
@@ -49,7 +50,9 @@ class artDisplay extends Component
                     //det: res.data.details
                     type: res.data.article_type,
                 })
-                console.log(this.state.art)
+                console.log(this.state.type)
+                console.log("\n\n\n\n\n")
+                console.log(res.data)
               })
         }
 
@@ -65,20 +68,28 @@ text()
 
 atrType()
 {
-  if(this.state.type===`message`)
+  console.log("running 2")
+  console.log(this.state.type)
+  if(this.state.type==2)
   {
+    //alert("is 2")
     return(
       <div>
-        {this.state.data.person}
+        <div>
+           {this.state.data.person}
+        </div>
+       
+        <div>
+          {this.state.data.remark}
+        </div>
       </div>
     )
   }
 
-  else if(this.state.type===`article`)
+  else if(this.state.type===1)
   {
     return(
       <div>
-        {this.state.data.person}
       </div>
     )
   }
@@ -88,6 +99,10 @@ title()
 {
   return this.state.tit
 }
+
+
+
+
 
 render()
   {return(
@@ -99,6 +114,10 @@ render()
 
           <div className="detail-title"> 
           {this.title()}
+          </div>
+
+          <div  className="detail-publish">
+            {this.atrType()}
           </div>
          
           <div className="detail-publish">
